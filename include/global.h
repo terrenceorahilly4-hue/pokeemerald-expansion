@@ -1228,3 +1228,4 @@ extern s32 gSpriteAllocs;
 #endif // TESTING
 
 #endif // GUARD_GLOBAL_H
+#define FORCED_GENDER  MALE

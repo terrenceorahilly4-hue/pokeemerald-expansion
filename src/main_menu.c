@@ -28,6 +28,7 @@
 #include "pokemon.h"
 #include "random.h"
 #include "rtc.h"
+#include "new_game.h"
 #include "save.h"
 #include "scanline_effect.h"
 #include "sound.h"
@@ -225,7 +226,7 @@ static void Task_NewGameBirchSpeech_SlideInNewGenderSprite(u8);
 static void Task_NewGameBirchSpeech_WaitForWhatsYourNameToPrint(u8);
 static void Task_NewGameBirchSpeech_WaitPressBeforeNameChoice(u8);
 static void Task_NewGameBirchSpeech_StartNamingScreen(u8);
-static void CB2_NewGameBirchSpeech_ReturnFromNamingScreen(void);
+void CB2_NewGameBirchSpeech_ReturnFromNamingScreen(void);
 static void Task_NewGameBirchSpeech_CreateNameYesNo(u8);
 static void Task_NewGameBirchSpeech_ProcessNameYesNoMenu(u8);
 void CreateYesNoMenuParameterized(u8, u8, u16, u16, u8, u8);
@@ -1296,35 +1297,8 @@ static void HighlightSelectedMainMenuItem(enum PartyMenuType menuType, u8 select
 
 static void Task_NewGameBirchSpeech_Init(u8 taskId)
 {
-    SetGpuReg(REG_OFFSET_DISPCNT, 0);
-    SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP);
-    InitBgFromTemplate(&sBirchBgTemplate);
-    SetGpuReg(REG_OFFSET_WIN0H, 0);
-    SetGpuReg(REG_OFFSET_WIN0V, 0);
-    SetGpuReg(REG_OFFSET_WININ, 0);
-    SetGpuReg(REG_OFFSET_WINOUT, 0);
-    SetGpuReg(REG_OFFSET_BLDCNT, 0);
-    SetGpuReg(REG_OFFSET_BLDALPHA, 0);
-    SetGpuReg(REG_OFFSET_BLDY, 0);
-
-    DecompressDataWithHeaderVram(sBirchSpeechShadowGfx, (void *)VRAM);
-    DecompressDataWithHeaderVram(sBirchSpeechBgMap, (void *)(BG_SCREEN_ADDR(7)));
-    LoadPalette(sBirchSpeechBgPals, BG_PLTT_ID(0), 2 * PLTT_SIZE_4BPP);
-    LoadPalette(&sBirchSpeechBgGradientPal[8], BG_PLTT_ID(0) + 1, PLTT_SIZEOF(8));
-    ScanlineEffect_Stop();
-    ResetSpriteData();
-    FreeAllSpritePalettes();
-    ResetAllPicSprites();
-    AddBirchSpeechObjects(taskId);
-    BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
-    gTasks[taskId].tBG1HOFS = 0;
-    gTasks[taskId].func = Task_NewGameBirchSpeech_WaitToShowBirch;
-    gTasks[taskId].tPlayerSpriteId = SPRITE_NONE;
-    gTasks[taskId].data[3] = 0xFF;
-    gTasks[taskId].tTimer = 0xD8;
-    PlayBGM(MUS_ROUTE122);
-    ShowBg(0);
-    ShowBg(1);
+    ForceNewGameQuickStart();
+    DestroyTask(taskId);
 }
 
 static void Task_NewGameBirchSpeech_WaitToShowBirch(u8 taskId)
@@ -1506,11 +1480,8 @@ static void Task_NewGameBirchSpeech_StartPlayerFadeIn(u8 taskId)
 
 static void Task_NewGameBirchSpeech_WaitForPlayerFadeIn(u8 taskId)
 {
-    if (gTasks[taskId].tIsDoneFadingSprites)
-    {
-        gSprites[gTasks[taskId].tPlayerSpriteId].oam.objMode = ST_OAM_OBJ_NORMAL;
-        gTasks[taskId].func = Task_NewGameBirchSpeech_BoyOrGirl;
-    }
+    ForceNewGameQuickStart();
+    DestroyTask(taskId);
 }
 
 static void Task_NewGameBirchSpeech_BoyOrGirl(u8 taskId)
@@ -1819,7 +1790,7 @@ static void Task_NewGameBirchSpeech_Cleanup(u8 taskId)
     }
 }
 
-static void CB2_NewGameBirchSpeech_ReturnFromNamingScreen(void)
+void CB2_NewGameBirchSpeech_ReturnFromNamingScreen(void)
 {
     u8 taskId;
     u8 spriteId;
@@ -2311,3 +2282,15 @@ static void Task_NewGameBirchSpeech_ReturnFromNamingScreenShowTextbox(u8 taskId)
 }
 
 #undef tTimer
+
+static const u8 sPlayerName_Ciaran[] = _("Ciaran");
+
+void ForceNewGameQuickStart(void)
+{
+    NewGameInitData();
+    gSaveBlock2Ptr->playerGender = MALE;
+    StringCopy(gSaveBlock2Ptr->playerName, sPlayerName_Ciaran);
+    SetWarpDestination(MAP_GROUP(MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F), MAP_NUM(MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F), WARP_ID_NONE, 6, 8);
+    WarpIntoMap();
+    SetMainCallback2(CB2_LoadMap);
+}
