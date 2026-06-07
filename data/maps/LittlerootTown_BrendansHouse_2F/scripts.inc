@@ -4,6 +4,7 @@ LittlerootTown_BrendansHouse_2F_MapScripts::
 	.byte 0
 
 LittlerootTown_BrendansHouse_2F_OnTransition:
+	call_if_unset FLAG_SPECIAL_FLAG_UNUSED_0x4003, BondOfEire_OpeningCinematic
 	call_if_lt VAR_LITTLEROOT_RIVAL_STATE, 2, LittlerootTown_BrendansHouse_2F_EventScript_CheckSetReadyToMeetBrendan
 	call_if_ge VAR_LITTLEROOT_RIVAL_STATE, 3, LittlerootTown_BrendansHouse_2F_EventScript_CheckShouldUpdateBrendanPos
 	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 4, PlayersHouse_2F_EventScript_BlockStairsUntilClockIsSet
@@ -299,3 +300,24 @@ PlayersHouse_2F_Text_ItsAGameCube:
 	.string "It's a Nintendo GameCube.\p"
 	.string "A Game Boy Advance is connected to\n"
 	.string "serve as the Controller.$"
+
+BondOfEire_OpeningCinematic::
+	goto_if_set FLAG_SPECIAL_FLAG_UNUSED_0x4003, BondOfEire_OpeningCinematic_End
+	setflag FLAG_SPECIAL_FLAG_UNUSED_0x4003
+	lockall
+	msgbox BondOfEire_OpeningCinematic_Text, MSGBOX_DEFAULT
+	closemessage
+	releaseall
+BondOfEire_OpeningCinematic_End::
+	return
+
+
+BondOfEire_OpeningCinematic_Text:
+.string "T-Rex Studio presents\p"
+.string "POKéMON: BOND OF éIRE\p"
+.string "The sea remembers everything,\n"
+.string "{PLAYER}.\p"
+.string "Your father used to say that.\n"
+.string "Every time he set out.\p"
+.string "The night he didn't come back...\p"
+.string "the sea was quiet.$"

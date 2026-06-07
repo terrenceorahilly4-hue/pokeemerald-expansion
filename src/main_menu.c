@@ -2285,6 +2285,8 @@ static void Task_NewGameBirchSpeech_ReturnFromNamingScreenShowTextbox(u8 taskId)
 
 static const u8 sPlayerName_Ciaran[] = _("Ciarán");
 
+
+
 void ForceNewGameQuickStart(void)
 {
     NewGameInitData();
@@ -2292,7 +2294,7 @@ void ForceNewGameQuickStart(void)
     StringCopy(gSaveBlock2Ptr->playerName, sPlayerName_Ciaran);
     FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_TRUCK);
     FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_TRUCK);
-    SetWarpDestination(MAP_GROUP(MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F), MAP_NUM(MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F), WARP_ID_NONE, 6, 8);
+    SetWarpDestination(MAP_GROUP(MAP_FLASHBACK_ROOM), MAP_NUM(MAP_FLASHBACK_ROOM), WARP_ID_NONE, 2, 2);
     WarpIntoMap();
     SetMainCallback2(CB2_LoadMap);
 }
