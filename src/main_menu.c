@@ -2283,7 +2283,7 @@ static void Task_NewGameBirchSpeech_ReturnFromNamingScreenShowTextbox(u8 taskId)
 
 #undef tTimer
 
-static const u8 sPlayerName_Ciaran[] = _("Ciaran");
+static const u8 sPlayerName_Ciaran[] = _("Ciarán");
 
 void ForceNewGameQuickStart(void)
 {
