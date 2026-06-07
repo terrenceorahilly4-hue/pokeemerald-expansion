@@ -141,7 +141,7 @@
     "LittlerootTown_MaysHouse_1F",
     "LittlerootTown_MaysHouse_2F",
     "LittlerootTown_ProfessorBirchsLab",
-        "FlashbackRoom"
+        "MAP_FLASHBACK_ROOM"
   ],
   "gMapGroup_IndoorOldale": [
     "OldaleTown_House1",
