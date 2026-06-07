@@ -9325,4 +9325,8 @@
       "layout_version": "frlg"
     }
   ]
-}
+{ 
+    "id": "LAYOUT_FLASHBACK_ROOM", 
+    "filename": "data/layouts/FlashbackRoom/layout.json" 
+},
+]
