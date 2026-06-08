@@ -1,8 +1,6 @@
 name: Build Pokemon Bond of Eire
 
 on:
-  push:
-    branches: [ clean-bedroom-state ]
   workflow_dispatch:
 
 jobs:
@@ -14,13 +12,10 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Install dependencies
+      - name: Install ARM toolchain
         run: |
           sudo apt-get update
-          sudo apt-get install -y gcc-arm-none-eabi binutils-arm-none-eabi libpng-dev
-
-      - name: Build tools
-        run: make tools
+          sudo apt-get install -y gcc-arm-none-eabi libnewlib-arm-none-eabi libpng-dev python3
 
       - name: Build ROM
         run: make -j$(nproc)
