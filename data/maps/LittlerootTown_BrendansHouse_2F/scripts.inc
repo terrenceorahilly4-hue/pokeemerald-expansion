@@ -302,12 +302,12 @@ PlayersHouse_2F_Text_ItsAGameCube:
 
 
 BondOfEire_DadsPokedex::
-goto_if_set FLAG_UNUSED_0x264, BondOfEire_DadsPokedex_End
+goto_if_set FLAG_UNUSED_0x033, BondOfEire_DadsPokedex_End
 lockall
 msgbox BondOfEire_Text_PokedexNote, MSGBOX_DEFAULT
 closemessage
 setflag FLAG_SYS_POKEDEX_GET
-setflag FLAG_UNUSED_0x264
+setflag FLAG_UNUSED_0x033
 msgbox BondOfEire_Text_PokedexReceived, MSGBOX_DEFAULT
 closemessage
 releaseall
