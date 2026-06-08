@@ -4,4 +4,5 @@
         "filename": "data/layouts/FlashbackRoom/layout.json",
         "layout_table_label": "FlashbackRoom"
     }
+,{"id": "LAYOUT_DUMMY_FIX", "filename": "data/layouts/FlashbackRoom/layout.json", "layout_table_label": "FlashbackRoom"}
 ]
