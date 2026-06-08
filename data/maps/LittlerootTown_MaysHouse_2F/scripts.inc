@@ -404,13 +404,3 @@ LittlerootTown_MaysHouse_2F_Text_MomBondOfEire:
     .string "so proud of you.\p"
     .string "Come home safe, love.$"
 
-LittlerootTown_MaysHouse_2F_Text_MomBondOfEire:
-    .string "MOM: Ciarán.\n"
-    .string "Your father would be so proud\n"
-    .string "of the person you've become.\p"
-    .string "He always said the wild ones\n"
-    .string "can feel a kind heart.\p"
-    .string "Go on, then.\n"
-    .string "Show me what you've got.\p"
-    .string "And come home when you're ready.\n"
-    .string "I'll keep the kettle on.$"
