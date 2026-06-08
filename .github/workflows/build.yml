@@ -2,7 +2,7 @@ name: Build Pokemon Bond of Eire
 
 on:
   push:
-    branches: [ test-old ]
+    branches: [ clean-bedroom-state ]
   workflow_dispatch:
 
 jobs:
