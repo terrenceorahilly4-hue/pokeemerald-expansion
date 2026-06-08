@@ -321,7 +321,7 @@ BondOfEire_Text_PokedexNote::
     .string "Rowan O'Cadhain's POKéDEX.\n"
     .string "Last synced: 3 years ago.\p"
     .string "A folded note, written in a hurry:\p"
-    .string "\"Ciarán—\n"
+    .string "Ciarán -\n"
     .string "If you're reading this, I've gone\n"
     .string "after the old stag. The one they\n"
     .string "call Sliabhán.\p"
@@ -336,7 +336,7 @@ BondOfEire_Text_PokedexNote::
     .string "Not by anything.\p"
     .string "Find your own bond, son.\n"
     .string "And don't let go.\p"
-    .string "—Da\"$"
+    .string "-Da$"
 
 .string "Ciaran received Dad's POKeDEX.$"
 
