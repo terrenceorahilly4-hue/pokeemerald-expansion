@@ -300,6 +300,7 @@ PlayersHouse_2F_Text_ItsAGameCube:
 	.string "A Game Boy Advance is connected to\n"
 	.string "serve as the Controller.$"
 
+
 BondOfEire_DadsPokedex::
 goto_if_set FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F_SWABLU_DOLL, BondOfEire_DadsPokedex_End
 lockall
@@ -318,18 +319,18 @@ msgbox BondOfEire_Text_PokedexAlready, MSGBOX_SIGN
 end
 
 BondOfEire_Text_PokedexNote:
-.string "Rowan O'Cadhain's POKéDEX.\n"
+.string "Rowan O'Cadhain's POKeDEX.\n"
 .string "Last synced: 3 years ago.\p"
 .string "A folded note is tucked inside.\p"
-.string "\"For Ciarán. When the world\n"
-.string "gets too small for you —\p"
+.string "For Ciaran. When the world\n"
+.string "gets too small for you -\p"
 .string "and it will - let this\n"
 .string "open it back up.\p"
-.string "- Da\"$"
+.string "- Da$"
 
 BondOfEire_Text_PokedexReceived:
-.string "Ciarán received Dad's POKéDEX.$"
+.string "Ciaran received Dad's POKeDEX.$"
 
 BondOfEire_Text_PokedexAlready:
-.string "Dad's POKéDEX. You carry it\n"
+.string "Dad's POKeDEX. You carry it\n"
 .string "everywhere now.$"
