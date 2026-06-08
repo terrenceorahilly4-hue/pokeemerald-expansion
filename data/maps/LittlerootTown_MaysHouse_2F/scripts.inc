@@ -394,3 +394,12 @@ RivalsHouse_2F_Text_CiaranWhereShouldIGoNext:
 	.string "Hey, {PLAYER}, if I see you while I'm out\n"
 	.string "catching POKéMON, I can pitch you a\l"
 	.string "battle if you'd like.$"
+
+LittlerootTown_MaysHouse_2F_EventScript_MomBondOfEire::
+    msgbox LittlerootTown_MaysHouse_2F_Text_MomBondOfEire, MSGBOX_DEFAULT
+    end
+
+LittlerootTown_MaysHouse_2F_Text_MomBondOfEire:
+    .string "MOM: Ciaran, your father would be\n"
+    .string "so proud of you.\p"
+    .string "Come home safe, love.$"
