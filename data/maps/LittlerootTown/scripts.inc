@@ -1027,7 +1027,7 @@ BondOfEire_RockruffCliff::
     closemessage
     msgbox BondOfEire_Text_MumRockruff, MSGBOX_DEFAULT
     closemessage
-    givepokemon SPECIES_ROCKRUFF, 5, ITEM_NONE, 0, 0, 0
+    givemon SPECIES_ROCKRUFF, 5, ITEM_NONE, 0, 0, 0
     waitstate
     setflag FLAG_UNUSED_0x034
     msgbox BondOfEire_Text_BondBegins, MSGBOX_DEFAULT
