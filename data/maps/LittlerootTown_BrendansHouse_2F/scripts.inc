@@ -337,9 +337,15 @@ BondOfEire_Text_PokedexNote::
     .string "Find your own bond, son.\n"
     .string "And don't let go.\p"
     .string "-Da$"
+BondOfEire_Text_PokedexReceived::
+    .string "Ciarán received Dad's POKéDEX.$"
+
 
 .string "Ciaran received Dad's POKeDEX.$"
 
 BondOfEire_Text_PokedexAlready:
 .string "Dad's POKeDEX. You carry it\n"
 .string "everywhere now.$"
+
+RivalsHouse_2F_Text_BrendanWhoAreYou::
+    .string "Brendan: …$"
