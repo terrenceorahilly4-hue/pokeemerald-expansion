@@ -1,6 +1,7 @@
 [
     {
         "id": "LAYOUT_FLASHBACK_ROOM",
-        "filename": "data/layouts/FlashbackRoom/layout.json"
+        "filename": "data/layouts/FlashbackRoom/layout.json",
+        "layout_table_label": "FlashbackRoom"
     }
 ]
