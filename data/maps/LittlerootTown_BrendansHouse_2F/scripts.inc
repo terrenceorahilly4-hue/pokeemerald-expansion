@@ -317,17 +317,27 @@ BondOfEire_DadsPokedex_End::
 msgbox BondOfEire_Text_PokedexAlready, MSGBOX_SIGN
 end
 
-BondOfEire_Text_PokedexNote:
-.string "Rowan O'Cadhain's POKeDEX.\n"
-.string "Last synced: 3 years ago.\p"
-.string "A folded note is tucked inside.\p"
-.string "For Ciaran. When the world\n"
-.string "gets too small for you -\p"
-.string "and it will - let this\n"
-.string "open it back up.\p"
-.string "- Da$"
+BondOfEire_Text_PokedexNote::
+    .string "Rowan O'Cadhain's POKéDEX.\n"
+    .string "Last synced: 3 years ago.\p"
+    .string "A folded note, written in a hurry:\p"
+    .string "\"Ciarán—\n"
+    .string "If you're reading this, I've gone\n"
+    .string "after the old stag. The one they\n"
+    .string "call Sliabhán.\p"
+    .string "I should have told you sooner.\n"
+    .string "I should have said goodbye.\p"
+    .string "But if I don't come back, know this:\n"
+    .string "the bond between a trainer and\n"
+    .string "their Pokémon is the only thing\n"
+    .string "that can't be broken.\p"
+    .string "Not by the sea.\n"
+    .string "Not by time.\n"
+    .string "Not by anything.\p"
+    .string "Find your own bond, son.\n"
+    .string "And don't let go.\p"
+    .string "—Da\"$"
 
-BondOfEire_Text_PokedexReceived:
 .string "Ciaran received Dad's POKeDEX.$"
 
 BondOfEire_Text_PokedexAlready:
