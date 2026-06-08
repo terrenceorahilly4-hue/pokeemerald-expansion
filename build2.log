@@ -1,0 +1,31 @@
+In file included from jsonproc.cpp:15:
+In file included from ./inja.hpp:28:
+./nlohmann/json.hpp:21935:35: warning: identifier '_json' preceded by whitespace in a literal operator declaration is deprecated [-Wdeprecated-literal-operator]
+ 21935 | inline nlohmann::json operator "" _json(const char* s, std::size_t n)
+       |                       ~~~~~~~~~~~~^~~~~
+       |                       operator""_json
+./nlohmann/json.hpp:21943:49: warning: identifier '_json_pointer' preceded by whitespace in a literal operator declaration is deprecated [-Wdeprecated-literal-operator]
+ 21943 | inline nlohmann::json::json_pointer operator "" _json_pointer(const char* s, std::size_t n)
+       |                                     ~~~~~~~~~~~~^~~~~~~~~~~~~
+       |                                     operator""_json_pointer
+2 warnings generated.
+cc -Wall -Wextra -Werror -std=c11 -O2 bin2c.c -o bin2c 
+cc gbafix.c -o gbafix 
+cc -Wall -Wextra -Werror -Wno-sign-compare -std=c11 -O2 -DPNG_SKIP_SETJMP_CHECK -I/usr/include/libpng16 main.c convert_png.c gfx.c jasc_pal.c lz.c rl.c util.c font.c huff.c -o gbagfx  -lpng -lz
+g++ -Wall -std=c++17 -O2 -I . jsonproc.cpp -o jsonproc 
+g++ -Wall -std=c++17 -O2 json11.cpp mapjson.cpp -o mapjson 
+g++ -std=c++11 -O2 -Wall -Wno-switch -Werror agb.cpp error.cpp main.cpp midi.cpp tables.cpp -o mid2agb 
+g++ -std=c++11 -O2 -Wall -Wno-switch -Werror asm_file.cpp c_file.cpp charmap.cpp preproc.cpp string_parser.cpp utf8.cpp io.cpp -o preproc 
+g++ -std=c++11 -O2 -Wall -Wno-switch -Werror main.cpp sym_file.cpp elf.cpp -o ramscrgen 
+cc -Wall -Wextra -Werror -std=c11 -O2 -DPNG_SKIP_SETJMP_CHECK -I/usr/include/libpng16 main.c convert_png.c util.c font.c -o rsfont  -lpng -lz
+g++ -Wall -Werror -std=c++11 -O2 scaninc.cpp c_file.cpp asm_file.cpp source_file.cpp -o scaninc 
+cc -Wall -O2 main.c -o trainerproc 
+g++ -Werror -std=c++17 -O2 -I . compresSmol.cpp compressAlgo.cpp tANS.cpp -o compresSmol 
+g++ -Werror -std=c++17 -O2  mainTiles.cpp compressSmolTiles.cpp tANS.cpp compressAlgo.cpp -o compresSmolTilemap 
+g++ -Wall -Werror -std=c++17 -O2 converter.cpp wav2agb.cpp wav_file.cpp -o wav2agb 
+cmp: .map_version: No such file or directory
+Cannot open file data/maps//FlashbackRoom/map.json for reading.
+make[1]: *** [map_data_rules.mk:33: include/constants/map_groups.h] Error 1
+python3 tools/wild_encounters/wild_encounters_to_header.py
+python3  tools/misc/make_scr_cmd_constants.py
+Makefile:301: *** Errors occurred while generating map-related sources. See error messages above for more details.  Stop.
