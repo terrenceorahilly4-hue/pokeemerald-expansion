@@ -2290,7 +2290,7 @@ void ForceNewGameQuickStart(void)
     NewGameInitData();
     gSaveBlock2Ptr->playerGender = MALE;
     StringCopy(gSaveBlock2Ptr->playerName, sPlayerName_Ciaran);
-    SetWarpDestination(MAP_GROUP(MAP_FLASHBACK_ROOM), MAP_NUM(MAP_FLASHBACK_ROOM), WARP_ID_NONE, 2, 2);
+    SetWarpDestination(MAP_GROUP(MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F), MAP_NUM(MAP_FLASHBACK_ROOM), WARP_ID_NONE, 2, 2);
     WarpIntoMap();
     SetMainCallback2(CB2_LoadMap);
 }
