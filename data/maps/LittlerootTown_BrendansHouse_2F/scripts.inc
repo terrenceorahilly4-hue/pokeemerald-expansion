@@ -306,8 +306,7 @@ goto_if_set FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F_SWABLU_DOLL, BondOfEire_
 lockall
 msgbox BondOfEire_Text_PokedexNote, MSGBOX_DEFAULT
 closemessage
-giveitem ITEM_POKEDEX
-waitstate
+setflag FLAG_SYS_POKEDEX_GET
 setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F_SWABLU_DOLL
 msgbox BondOfEire_Text_PokedexReceived, MSGBOX_DEFAULT
 closemessage
