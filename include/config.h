@@ -2,3 +2,5 @@
 #define CONFIG_H
 #define FORCED_GENDER  MALE
 #endif
+#define BUTTON_MODE_RUN  TRUE
+#define MENU_ENABLE_SELECT  FALSE
