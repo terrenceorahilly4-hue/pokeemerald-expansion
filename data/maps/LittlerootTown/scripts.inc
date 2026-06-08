@@ -1014,3 +1014,50 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I have something to show you.\n"
 	.string "Let's go to my LAB.$"
 
+
+BondOfEire_RockruffCliff::
+    goto_if_set FLAG_UNUSED_0x034, BondOfEire_RockruffCliff_End
+    lockall
+    msgbox BondOfEire_Text_RockruffAppears, MSGBOX_DEFAULT
+    closemessage
+    applymovement LOCALID_PLAYER, BondOfEire_Movement_PlayerFaceCliff
+    waitmovement 0
+    delay 30
+    msgbox BondOfEire_Text_RockruffApproaches, MSGBOX_DEFAULT
+    closemessage
+    msgbox BondOfEire_Text_MumRockruff, MSGBOX_DEFAULT
+    closemessage
+    givepokemon SPECIES_ROCKRUFF, 5, ITEM_NONE, 0, 0, 0
+    waitstate
+    setflag FLAG_UNUSED_0x034
+    msgbox BondOfEire_Text_BondBegins, MSGBOX_DEFAULT
+    closemessage
+    releaseall
+    end
+
+BondOfEire_RockruffCliff_End::
+    end
+
+BondOfEire_Movement_PlayerFaceCliff:
+    walk_in_place_faster_down
+    step_end
+
+BondOfEire_Text_RockruffAppears:
+    .string "A ROCKRUFF sits on the cliff edge.\n"
+    .string "It watches you. It doesn't run.$"
+
+BondOfEire_Text_RockruffApproaches:
+    .string "......\p"
+    .string "It steps forward.\n"
+    .string "Sits at your feet.$"
+
+BondOfEire_Text_MumRockruff:
+    .string "MOM: Your father found his first\n"
+    .string "partner the same way.\p"
+    .string "On this same cliff.\p"
+    .string "No ball. No battle.\n"
+    .string "Just recognition.$"
+
+BondOfEire_Text_BondBegins:
+    .string "A bond forged in trust\n"
+    .string "needs no cage.$"
