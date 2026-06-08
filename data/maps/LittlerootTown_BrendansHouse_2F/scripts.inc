@@ -323,9 +323,9 @@ BondOfEire_Text_PokedexNote:
 .string "A folded note is tucked inside.\p"
 .string "\"For Ciarán. When the world\n"
 .string "gets too small for you —\p"
-.string "and it will — let this\n"
+.string "and it will - let this\n"
 .string "open it back up.\p"
-.string "— Da\"$"
+.string "- Da\"$"
 
 BondOfEire_Text_PokedexReceived:
 .string "Ciarán received Dad's POKéDEX.$"
