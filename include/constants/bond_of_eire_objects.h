@@ -3,7 +3,7 @@
 
 // --- Standard Local IDs ---
 #define LOCALID_FRONTIER_MART_CLERK 1
-#define LOCALID_TOWER_LOBBY_REPORTER 5
+#define LOWER_TOWER_LOBBY_REPORTER 5
 
 // --- Gabby and Ty Route Constants ---
 #define LOCALID_ROUTE111_GABBY_1 1
@@ -28,12 +28,10 @@
 #define LOCALID_SLATEPORT_ENERGY_GURU 1
 
 // --- Contest Contestant Constants ---
-#define LOCALID_CONTESTANT_1 1
-#define LOCALID_CONTESTANT_2 2
-#define LOCALID_CONTESTANT_3 3
-#define LOCALID_CONTESTANT_4 4
-
-// --- Faraway Island Constants ---
-#define LOCALID_FARAWAY_ISLAND_MEW 1
+// Safe high IDs to prevent black-screen initialization crashes
+#define LOCALID_CONTESTANT_1 100
+#define LOCALID_CONTESTANT_2 101
+#define LOCALID_CONTESTANT_3 102
+#define LOCALID_CONTESTANT_4 103
 
 #endif // GUARD_BOND_OF_EIRE_OBJECTS_H
