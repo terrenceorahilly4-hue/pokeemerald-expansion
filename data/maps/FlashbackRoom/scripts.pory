@@ -1,0 +1,16 @@
+mapscripts FlashbackRoom_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        setflag(FLAG_SYS_B_DASH)
+    }
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0: FlashbackRoom_OnFrame_Init
+    ]
+}
+
+script FlashbackRoom_OnFrame_Init {
+    lockall
+    fadescreen(FADE_FROM_BLACK)
+    setvar(VAR_TEMP_0, 1)
+    msgbox("...", MSGBOX_DEFAULT)
+    releaseall
+}
