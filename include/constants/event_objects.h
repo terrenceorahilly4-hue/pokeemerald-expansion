@@ -603,6 +603,12 @@ enum
 #define OBJ_EVENT_PAL_TAG_BALL_BEAST              0x1169
 // Gen VIII
 #define OBJ_EVENT_PAL_TAG_BALL_STRANGE            0x116A
+#ifndef LOCALID_FARAWAY_ISLAND_MEW
+#define LOCALID_FARAWAY_ISLAND_MEW 1
+
+#endif
+
+
 #endif //OW_FOLLOWERS_POKEBALLS
 // Used as a placeholder follower graphic
 #define OBJ_EVENT_PAL_TAG_SUBSTITUTE              0x7611
@@ -619,4 +625,17 @@ enum
 // '(C)ompressed (E)vent'
 #define COMP_OW_TILE_TAG_BASE 0xCE00
 
+
+#ifndef LOCALID_CONTESTANT_1
+#define LOCALID_CONTESTANT_1 1
+#endif
+#ifndef LOCALID_CONTESTANT_2
+#define LOCALID_CONTESTANT_2 2
+#endif
+#ifndef LOCALID_CONTESTANT_3
+#define LOCALID_CONTESTANT_3 3
+#endif
+#ifndef LOCALID_CONTESTANT_4
+#define LOCALID_CONTESTANT_4 4
+#endif
 #endif  // GUARD_CONSTANTS_EVENT_OBJECTS_H
