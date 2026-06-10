@@ -107,30 +107,21 @@ static void CB2_SkipToNewGame(void)
     FlagSet(FLAG_ADVENTURE_STARTED);
 
     // Hide all vanilla intro NPCs permanently
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_TWIN);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_BIRCH);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_RIVAL);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_TRUCK);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_TRUCK);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_MOM);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_VIGOROTH_1);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_VIGOROTH_2);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_MOM);
-    FlagSet(FLAG_HIDE_PLAYERS_HOUSE_DAD);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_SIBLING);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_MAY);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_MOM);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_MOM);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_SIBLING);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_BRENDAN);
-
-    // Advance intro states to disable any remaining vanilla triggers
     // Fast-forward map script states to bypass vanilla events
     VarSet(VAR_LITTLEROOT_INTRO_STATE, 7);          // 7 = Intro sequence fully complete
     VarSet(VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 2); // 2 = Mom TV event complete
     VarSet(VAR_LITTLEROOT_HOUSES_STATE_MAY, 2);     // 2 = May's intro complete
     VarSet(VAR_LITTLEROOT_TOWN_STATE, 4);           // 4 = Town is fully open, no blockers
+    // Hide every vanilla NPC/Truck (all share FLAG_UNUSED_0x020)
+    FlagSet(FLAG_UNUSED_0x020);
+
+    // Fast-forward intro states to pacify vanilla ON_FRAME scripts
+    VarSet(VAR_LITTLEROOT_INTRO_STATE, 7);          // 7 = Intro sequence fully complete
+    VarSet(VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 2); // 2 = Mom TV event complete
+    VarSet(VAR_LITTLEROOT_HOUSES_STATE_MAY, 2);     // 2 = May's intro complete
+    VarSet(VAR_LITTLEROOT_TOWN_STATE, 4);           // 4 = Town fully open, no blockers
+    FlagSet(FLAG_SYS_POKEMON_GET);                  // Prevent Birch bag/lab scripts
+    FlagSet(FLAG_SYS_POKEDEX_GET);                  // Prevent Pokedex-related blocks
         SetWarpDestination(MAP_GROUP(MAP_FLASHBACK_ROOM), MAP_NUM(MAP_FLASHBACK_ROOM), 0, -1, -1);
         SetMainCallback2(CB2_NewGame);
     }
