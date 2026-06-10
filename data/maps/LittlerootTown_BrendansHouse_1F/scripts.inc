@@ -432,15 +432,13 @@ PlayersHouse_1F_Text_WhatColorDidTheySay:
 	.string "that POKéMON was?$"
 
 PlayersHouse_1F_Text_StillUnknownPokemon:
+	.string "MOM: Well, isn't that something!\n"
+	.string "There are still unknown POKéMON.$"
+
 BrendansHouse_1F_EventScript_CustomMum::
 	lock
 	faceplayer
-	msgbox PlayersHouse_1F_Text_MomBondOfEire, MSGBOX_DEFAULT
+	msgbox BrendansHouse_1F_Text_CustomMum, MSGBOX_DEFAULT
 	waitmessage
 	release
 	end
-
-PlayersHouse_1F_Text_MomBondOfEire:
-.string "MOM: Ciarán, your father would be\n"
-.string "so proud of you.\p"
-.string "Come home safe, love.$"
