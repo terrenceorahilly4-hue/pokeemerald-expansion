@@ -603,6 +603,7 @@ enum
 #define OBJ_EVENT_PAL_TAG_BALL_BEAST              0x1169
 // Gen VIII
 #define OBJ_EVENT_PAL_TAG_BALL_STRANGE            0x116A
+
 #endif //OW_FOLLOWERS_POKEBALLS
 // Used as a placeholder follower graphic
 #define OBJ_EVENT_PAL_TAG_SUBSTITUTE              0x7611
@@ -619,4 +620,18 @@ enum
 // '(C)ompressed (E)vent'
 #define COMP_OW_TILE_TAG_BASE 0xCE00
 
+
+
+#ifndef LOCALID_PLAYERS_HOUSE_1F_DAD
+#define LOCALID_PLAYERS_HOUSE_1F_DAD 1
+
+#endif
+#ifndef LOCALID_PLAYERS_HOUSE_1F_MOM
+#define LOCALID_PLAYERS_HOUSE_1F_MOM 2
+
+#endif
+
+#ifndef LOCALID_RIVALS_HOUSE_1F_RIVAL
+#define LOCALID_RIVALS_HOUSE_1F_RIVAL 1
+#endif
 #endif  // GUARD_CONSTANTS_EVENT_OBJECTS_H
