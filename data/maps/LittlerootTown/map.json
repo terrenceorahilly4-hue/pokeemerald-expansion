@@ -32,7 +32,7 @@
             "movement_range_y": 2,
             "trainer_type": "TRAINER_TYPE_NONE",
             "trainer_sight_or_berry_tree_id": "0",
-            "script": "0x0",
+            "script": "LittlerootTown_EventScript_Twin",
             "flag": "0"
         },
         {
@@ -72,7 +72,7 @@
             "movement_range_y": 0,
             "trainer_type": "TRAINER_TYPE_NONE",
             "trainer_sight_or_berry_tree_id": "0",
-            "script": "0x0",
+            "script": "LittlerootTown_EventScript_Mom",
             "flag": "FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE"
         },
         {
