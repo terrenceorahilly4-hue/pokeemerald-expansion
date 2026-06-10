@@ -442,3 +442,4 @@ BrendansHouse_1F_EventScript_CustomMum::
 	waitmessage
 	release
 	end
+.include "data/maps/LittlerootTown_BrendansHouse_1F/text.inc"
