@@ -1,4 +1,5 @@
 {
+    "map_scripts": "BondOfEire_EmptyMapScripts",
     "id": "MAP_LITTLEROOT_TOWN_MAYS_HOUSE_2F",
     "name": "LittlerootTown_MaysHouse_2F",
     "layout": "LAYOUT_LITTLEROOT_TOWN_MAYS_HOUSE_2F",
