@@ -439,3 +439,8 @@ BrendansHouse_1F_EventScript_CustomMum::
 	waitmessage
 	release
 	end
+
+PlayersHouse_1F_Text_MomBondOfEire:
+.string "MOM: Ciarán, your father would be\n"
+.string "so proud of you.\p"
+.string "Come home safe, love.$"
