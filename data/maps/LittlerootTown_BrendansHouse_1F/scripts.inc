@@ -432,7 +432,7 @@ PlayersHouse_1F_Text_WhatColorDidTheySay:
 	.string "that POKéMON was?$"
 
 PlayersHouse_1F_Text_StillUnknownPokemon:
-PlayersHouse_1F_EventScript_Mom::
+BrendansHouse_1F_EventScript_CustomMum::
 	msgbox PlayersHouse_1F_Text_MomBondOfEire, MSGBOX_DEFAULT
 	end
 
