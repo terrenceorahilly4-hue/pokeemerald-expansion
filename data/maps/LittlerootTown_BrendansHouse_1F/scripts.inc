@@ -1,4 +1,4 @@
-LittlerootTown_BrendansHouse_1F_MapScripts::
+LittlerootTown_BrendansHouse_1F_MapScripts_ORIGINAL::
 	map_script MAP_SCRIPT_ON_LOAD, LittlerootTown_BrendansHouse_1F_OnLoad
 	map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_BrendansHouse_1F_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, LittlerootTown_BrendansHouse_1F_OnFrame
