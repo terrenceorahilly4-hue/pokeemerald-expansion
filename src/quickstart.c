@@ -14,6 +14,7 @@
 #include "sprite.h"
 #include "string_util.h"
 #include "task.h"
+#include "event_data.h"
 
 
 #define TAG_SKIP_INTRO 2000
