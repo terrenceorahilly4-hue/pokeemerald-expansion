@@ -1,0 +1,20 @@
+@
+@ DO NOT MODIFY THIS FILE! It is auto-generated from data/maps/NavelRock_BasePath_B8F_Frlg/map.json
+@
+
+NavelRock_BasePath_B8F_Frlg:
+	.4byte NavelRock_BasePath_B8F_Layout
+	.4byte NavelRock_BasePath_B8F_Frlg_MapEvents
+	.4byte NavelRock_BasePath_B8F_Frlg_MapScripts
+	.4byte NULL
+	.2byte MUS_RG_SEVII_CAVE
+	.2byte LAYOUT_NAVEL_ROCK_BASE_PATH_B8F
+	.byte MAPSEC_NAVEL_ROCK_FRLG
+	.byte FALSE
+	.byte WEATHER_NONE
+	.byte MAP_TYPE_UNDERGROUND
+	.byte 0
+	.byte 0
+	map_header_flags allow_cycling=FALSE, allow_escaping=FALSE, allow_running=TRUE, show_map_name=TRUE
+	.byte MAP_BATTLE_SCENE_NORMAL
+
