@@ -99,7 +99,6 @@ static void CB2_SkipToNewGame(void)
         ResetTasks();
         FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_TRUCK);
         FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_TRUCK);
-        VarSet(VAR_LITTLEROOT_INTRO_STATE, 3);
         VarSet(VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 1);
         VarSet(VAR_LITTLEROOT_HOUSES_STATE_MAY, 1);
 
@@ -127,9 +126,11 @@ static void CB2_SkipToNewGame(void)
     FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_BRENDAN);
 
     // Advance intro states to disable any remaining vanilla triggers
-    VarSet(VAR_LITTLEROOT_INTRO_STATE, 3);
-    VarSet(VAR_LITTLEROOT_HOUSES_STATE_MAY, 3);
-    VarSet(VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 3);
+    // Fast-forward map script states to bypass vanilla events
+    VarSet(VAR_LITTLEROOT_INTRO_STATE, 7);          // 7 = Intro sequence fully complete
+    VarSet(VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 2); // 2 = Mom TV event complete
+    VarSet(VAR_LITTLEROOT_HOUSES_STATE_MAY, 2);     // 2 = May's intro complete
+    VarSet(VAR_LITTLEROOT_TOWN_STATE, 4);           // 4 = Town is fully open, no blockers
         SetWarpDestination(MAP_GROUP(MAP_FLASHBACK_ROOM), MAP_NUM(MAP_FLASHBACK_ROOM), 0, -1, -1);
         SetMainCallback2(CB2_NewGame);
     }

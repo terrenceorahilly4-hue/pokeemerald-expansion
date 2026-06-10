@@ -1,6 +1,5 @@
 {
     "id": "MAP_LITTLEROOT_TOWN_MAYS_HOUSE_2F",
-    "map_scripts": "BondOfEire_EmptyMapScripts",
     "name": "LittlerootTown_MaysHouse_2F",
     "layout": "LAYOUT_LITTLEROOT_TOWN_MAYS_HOUSE_2F",
     "music": "MUS_LITTLEROOT",

@@ -1,6 +1,5 @@
 {
     "id": "MAP_LITTLEROOT_TOWN",
-    "map_scripts": "BondOfEire_EmptyMapScripts",
     "name": "LittlerootTown",
     "layout": "LAYOUT_LITTLEROOT_TOWN",
     "music": "MUS_LITTLEROOT",
