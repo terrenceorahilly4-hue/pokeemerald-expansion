@@ -103,6 +103,10 @@ static void CB2_SkipToNewGame(void)
         VarSet(VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 1);
         VarSet(VAR_LITTLEROOT_HOUSES_STATE_MAY, 1);
 
+    FlagSet(FLAG_SYS_POKEMON_GET);
+    FlagSet(FLAG_SYS_POKEDEX_GET);
+    FlagSet(FLAG_ADVENTURE_STARTED);
+
         SetWarpDestination(MAP_GROUP(MAP_FLASHBACK_ROOM), MAP_NUM(MAP_FLASHBACK_ROOM), 0, -1, -1);
         SetMainCallback2(CB2_NewGame);
     }
