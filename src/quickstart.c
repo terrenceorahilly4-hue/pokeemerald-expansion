@@ -96,7 +96,7 @@ static void CB2_SkipToNewGame(void)
         ResetSpriteData();
         FreeAllSpritePalettes();
         ResetTasks();
-    SetWarpDestinationToMap(MAP_FLASHBACK_ROOM, -1, -1);
+    SetWarpDestinationToMapWarp(MAP_FLASHBACK_ROOM, 0);
         SetMainCallback2(CB2_NewGame);
     }
 }
