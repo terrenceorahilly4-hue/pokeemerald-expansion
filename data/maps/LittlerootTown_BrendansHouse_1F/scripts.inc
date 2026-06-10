@@ -432,9 +432,6 @@ PlayersHouse_1F_Text_WhatColorDidTheySay:
 	.string "that POKéMON was?$"
 
 PlayersHouse_1F_Text_StillUnknownPokemon:
-	.string "MOM: Well, isn't that something!\n"
-	.string "There are still unknown POKéMON.$"
-
 PlayersHouse_1F_EventScript_Mom::
 	msgbox PlayersHouse_1F_Text_MomBondOfEire, MSGBOX_DEFAULT
 	end
@@ -443,3 +440,4 @@ PlayersHouse_1F_Text_MomBondOfEire:
 	.string "MOM: Ciarán, your father would be\n"
 	.string "so proud of you.\p"
 	.string "Come home safe, love.$"
+
