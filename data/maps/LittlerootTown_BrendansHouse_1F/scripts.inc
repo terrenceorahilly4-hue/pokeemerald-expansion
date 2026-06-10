@@ -433,11 +433,9 @@ PlayersHouse_1F_Text_WhatColorDidTheySay:
 
 PlayersHouse_1F_Text_StillUnknownPokemon:
 BrendansHouse_1F_EventScript_CustomMum::
+	lock
+	faceplayer
 	msgbox PlayersHouse_1F_Text_MomBondOfEire, MSGBOX_DEFAULT
+	waitmessage
+	release
 	end
-
-PlayersHouse_1F_Text_MomBondOfEire:
-	.string "MOM: Ciarán, your father would be\n"
-	.string "so proud of you.\p"
-	.string "Come home safe, love.$"
-
