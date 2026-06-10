@@ -75,7 +75,7 @@
         "gMapGroup_IndoorTwoIslandRoute_Frlg",
         "gMapGroup_IndoorSixIslandRoute_Frlg",
         "gMapGroup_IndoorSevenIslandRoute_Frlg",
-        "FlashbackRoom"
+        "gMapGroup_Custom"
     ],
     "gMapGroup_TownsAndRoutes": [
         "PetalburgCity",
@@ -1161,5 +1161,8 @@
     ],
     "gMapGroup_IndoorSevenIslandRoute_Frlg": [
         "SevenIsland_SevaultCanyon_House_Frlg"
+    ],
+    "gMapGroup_Custom": [
+        "FlashbackRoom"
     ]
 }
