@@ -1,6 +1,6 @@
+#include "global.h"
 #include "event_data.h"
 #include "constants/maps.h"
-#include "global.h"
 #include "config/general.h"
 #include "constants/global.h"
 #include "constants/rgb.h"
@@ -117,7 +117,6 @@ void CreateQuickstartHud(void)
     CreateSprite(&sQuickstartHudTemplate, x, y, 0);
 }
 
-}
 
 void Quickstart(void)
 {
