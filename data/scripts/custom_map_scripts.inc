@@ -26,3 +26,10 @@ special EchoBond_Increment
 BondOfEire_Campfire_Text_BondLevel:
 .string "The campfire crackles warmly.\nRockruff feels a little closer to you.$"
 BrendansHouse_1F_EventScript_Mum::
+
+BOND_RinnuaTown_EventScript_Sign::
+msgbox BOND_RinnuaTown_Text_Sign, MSGBOX_SIGN
+end
+
+BOND_RinnuaTown_Text_Sign:
+.string "Rinnua Town\nWhere the cliffs meet the sea.$"
