@@ -1,6 +1,8 @@
 name: Build Pokemon Bond of Eire
 
 on:
+  push:
+    branches: [ fresh-start ]
   workflow_dispatch:
 
 jobs:
