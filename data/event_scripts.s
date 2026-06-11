@@ -1739,19 +1739,3 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/scripts/wild_encounter.inc"
 .include "data/maps/MAP_FLASHBACK_ROOM/scripts.inc"
 
-@ Dummy map scripts to silence vanilla
-.align 2
-LittlerootTown_MapScripts::
-.byte 0
-
-.align 2
-LittlerootTown_BrendansHouse_1F_MapScripts::
-.byte 0
-
-.align 2
-LittlerootTown_MaysHouse_1F_MapScripts::
-.byte 0
-
-.align 2
-LittlerootTown_MaysHouse_2F_MapScripts::
-.byte 0

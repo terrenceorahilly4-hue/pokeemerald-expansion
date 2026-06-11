@@ -1,4 +1,4 @@
-LittlerootTown_BrendansHouse_1F_MapScripts_ORIGINAL::
+LittlerootTown_BrendansHouse_1F_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, LittlerootTown_BrendansHouse_1F_OnLoad
 	map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_BrendansHouse_1F_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, LittlerootTown_BrendansHouse_1F_OnFrame
@@ -434,12 +434,3 @@ PlayersHouse_1F_Text_WhatColorDidTheySay:
 PlayersHouse_1F_Text_StillUnknownPokemon:
 	.string "MOM: Well, isn't that something!\n"
 	.string "There are still unknown POKéMON.$"
-
-BrendansHouse_1F_EventScript_CustomMum::
-	lock
-	faceplayer
-	msgbox BrendansHouse_1F_Text_CustomMum, MSGBOX_DEFAULT
-	waitmessage
-	release
-	end
-.include "data/maps/LittlerootTown_BrendansHouse_1F/text.inc"
