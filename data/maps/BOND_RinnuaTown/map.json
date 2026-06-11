@@ -38,7 +38,7 @@
       "type": "sign",
       "x": 7,
       "y": 10,
-      "elevation": 0,
+      "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "BOND_RinnuaTown_EventScript_Sign"
     }
@@ -48,5 +48,6 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": []
+  "connections": [],
+  "type": "TOWN"
 }
