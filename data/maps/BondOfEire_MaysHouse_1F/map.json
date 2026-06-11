@@ -1,6 +1,6 @@
 {
   "id": "MAP_BOND_OF_EIRE_MAYS_HOUSE_1F",
-  "name": "NeighboursHouse_1F",
+  "name": "BOND_NeighboursHouse_1F",
   "layout": "LAYOUT_LITTLEROOT_TOWN_MAYS_HOUSE_1F",
   "music": "MUS_LITTLEROOT",
   "region": "REGION_HOENN",
