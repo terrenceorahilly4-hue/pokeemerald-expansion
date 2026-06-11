@@ -1,6 +1,7 @@
 #include "global.h"
 #include "echo_bond.h"
 #include "script.h"
+#include "event_data.h"
 
 void EchoBond_Get(void)
 {
