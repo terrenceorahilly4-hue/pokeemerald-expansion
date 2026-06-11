@@ -33,3 +33,11 @@ end
 
 BOND_RinnuaTown_Text_Sign:
 .string "Rinnua Town\nWhere the cliffs meet the sea.$"
+
+CableClub_EventScript_WirelessClubAttendant_Frlg::
+release
+end
+
+CableClub_EventScript_DirectCornerAttendant_Frlg::
+release
+end
