@@ -1741,3 +1741,4 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 
 .include "data/scripts/custom_map_scripts.inc"
 .include "data/maps/BOND_BirchsLab/scripts.inc"
+.include "data/scripts/custom_map_scripts.inc"
