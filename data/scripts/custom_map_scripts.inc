@@ -48,3 +48,6 @@ end
 
 BondOfEire_Campfire_Text_BondLevel:
 .string "The campfire crackles warmly.\nRockruff feels a little closer to you.$"
+
+BrendansHouse_1F_EventScript_Mum::
+.byte 0
