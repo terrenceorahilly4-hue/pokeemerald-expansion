@@ -28,4 +28,4 @@ release
 end
 
 BrendansHouse_1F_Text_CustomMum:
-.string "Your custom Mum dialogue here$"
+.string "Ciarán, your father would be so proud.$"

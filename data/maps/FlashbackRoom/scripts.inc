@@ -1,13 +1,7 @@
 FlashbackRoom_MapScripts::
-map_script MAP_SCRIPT_ON_FRAME, FlashbackRoom_OnFrame
-.byte 0
+    map_script MAP_SCRIPT_ON_TRANSITION, FlashbackRoom_OnTransition
+    .byte 0
 
-FlashbackRoom_OnFrame:
-call_if_unset FLAG_SYS_GAME_CLEAR, FlashbackRoom_EventScript_WarpToBrendansHouse
-end
-
-FlashbackRoom_EventScript_WarpToBrendansHouse:
-warpsilent MAP_BOND_OF_EIRE_BRENDANS_HOUSE_2F, 0
-waitstate
-release
-end
+FlashbackRoom_OnTransition::
+    warpsilent MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F, 6, 8
+    end
