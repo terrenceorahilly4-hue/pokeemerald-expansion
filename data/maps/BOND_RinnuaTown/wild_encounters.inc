@@ -1,0 +1,1 @@
+// No wild encounters
