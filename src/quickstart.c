@@ -131,7 +131,7 @@ void Quickstart(void)
         FlagSet(FLAG_SYS_POKEMON_GET);
         FlagSet(FLAG_SYS_POKEDEX_GET);
         FlagSet(FLAG_ADVENTURE_STARTED);
-        SetWarpDestination(MAP_GROUP(MAP_BOND_OF_EIRE_BRENDANS_HOUSE_2F), MAP_NUM(MAP_BOND_OF_EIRE_BRENDANS_HOUSE_2F), 0, -1, -1);
+        SetWarpDestination(MAP_GROUP(MAP_FLASHBACK_ROOM), MAP_NUM(MAP_FLASHBACK_ROOM), 0, -1, -1);
         SetMainCallback2(CB2_NewGame);
     }
 }
