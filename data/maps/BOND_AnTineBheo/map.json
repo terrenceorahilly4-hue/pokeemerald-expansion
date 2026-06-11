@@ -1,5 +1,5 @@
 {
-  "id": "MAP_BOND_OF_EIRE_CAMPFIRE",
+  "id": "MAP_BOND_AN_TINE_BHEO",
   "name": "BOND_AnTineBheo",
   "layout": "LAYOUT_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F",
   "music": "MUS_LITTLEROOT",
@@ -27,7 +27,7 @@
     }
   ],
   "warp_events": [
-    { "x": 4, "y": 8, "elevation": 3, "dest_map": "MAP_BOND_OF_EIRE_BRENDANS_HOUSE_1F", "dest_warp_id": 255 }
+    { "x": 4, "y": 8, "elevation": 3, "dest_map": "MAP_BOND_CIARANS_HOUSE_1F", "dest_warp_id": 255 }
   ],
   "coord_events": [],
   "bg_events": []
