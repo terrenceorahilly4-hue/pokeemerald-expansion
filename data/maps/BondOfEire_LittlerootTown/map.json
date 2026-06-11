@@ -4,6 +4,7 @@
   "layout": "LAYOUT_LITTLEROOT_TOWN",
   "music": "MUS_LITTLEROOT",
   "region": "REGION_HOENN",
+    "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "object_events": [],
   "warp_events": [
     { "x": 14, "y": 8, "elevation": 0, "dest_map": "MAP_BOND_OF_EIRE_MAYS_HOUSE_1F", "dest_warp_id": 1 },
