@@ -1230,3 +1230,4 @@ extern s32 gSpriteAllocs;
 
 #endif // GUARD_GLOBAL_H
 #define FORCED_GENDER  MALE
+// Force rebuild for BOND_BirchsLab
