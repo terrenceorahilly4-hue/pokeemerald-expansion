@@ -18,14 +18,13 @@ BondOfEire_MaysHouse_1F_MapScripts::
 BondOfEire_MaysHouse_2F_MapScripts::
 .byte 0
 
-@ Custom Mum dialogue
-BrendansHouse_1F_EventScript_CustomMum::
+BondOfEire_EventScript_Mum::
 lock
 faceplayer
-msgbox BrendansHouse_1F_Text_CustomMum, MSGBOX_DEFAULT
+msgbox BondOfEire_Text_Mum, MSGBOX_DEFAULT
 waitmessage
 release
 end
 
-BrendansHouse_1F_Text_CustomMum:
+BondOfEire_Text_Mum:
 .string "Ciarán, your father would be so proud.$"
