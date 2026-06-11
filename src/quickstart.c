@@ -14,7 +14,6 @@
 #include "sprite.h"
 #include "string_util.h"
 #include "task.h"
-#include "event_data.h"
 
 
 #define TAG_SKIP_INTRO 2000
@@ -97,67 +96,6 @@ static void CB2_SkipToNewGame(void)
         ResetSpriteData();
         FreeAllSpritePalettes();
         ResetTasks();
-        FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_TRUCK);
-        FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_TRUCK);
-        VarSet(VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 1);
-        VarSet(VAR_LITTLEROOT_HOUSES_STATE_MAY, 1);
-
-    FlagSet(FLAG_SYS_POKEMON_GET);
-    FlagSet(FLAG_SYS_POKEDEX_GET);
-    FlagSet(FLAG_ADVENTURE_STARTED);
-
-    // Hide all vanilla intro NPCs permanently
-    // Fast-forward map script states to bypass vanilla events
-    VarSet(VAR_LITTLEROOT_INTRO_STATE, 7);          // 7 = Intro sequence fully complete
-    VarSet(VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 2); // 2 = Mom TV event complete
-    VarSet(VAR_LITTLEROOT_HOUSES_STATE_MAY, 2);     // 2 = May's intro complete
-    VarSet(VAR_LITTLEROOT_TOWN_STATE, 4);           // 4 = Town is fully open, no blockers
-    // Hide every vanilla NPC/Truck (all share FLAG_UNUSED_0x020)
-    FlagSet(FLAG_UNUSED_0x020);
-
-    // Fast-forward intro states to pacify vanilla ON_FRAME scripts
-    VarSet(VAR_LITTLEROOT_INTRO_STATE, 7);          // 7 = Intro sequence fully complete
-    VarSet(VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 2); // 2 = Mom TV event complete
-    VarSet(VAR_LITTLEROOT_HOUSES_STATE_MAY, 2);     // 2 = May's intro complete
-    VarSet(VAR_LITTLEROOT_TOWN_STATE, 4);           // 4 = Town fully open, no blockers
-    FlagSet(FLAG_SYS_POKEMON_GET);                  // Prevent Birch bag/lab scripts
-    FlagSet(FLAG_SYS_POKEDEX_GET);                  // Prevent Pokedex-related blocks
-    // Hide all vanilla NPCs/Trucks (original flags preserved)
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_MOM);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_VIGOROTH_2);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_VIGOROTH_1);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_MOM);
-    FlagSet(FLAG_HIDE_PLAYERS_HOUSE_DAD);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_SIBLING);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_BRENDAN);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_MOM);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_MOM);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_SIBLING);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_MAY);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_TRUCK);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_TRUCK);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_TWIN);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_BIRCH);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_RIVAL);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F_POKE_BALL);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F_SWABLU_DOLL);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_BEDROOM_MOM);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_BEDROOM);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_BEDROOM);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_2F_PICHU_DOLL);
-    FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_2F_POKE_BALL);
-    // Hide objects that originally had flag 0
-    FlagSet(FLAG_HIDE_INTRO_NPC);
-
-    // Fast-forward intro states
-    VarSet(VAR_LITTLEROOT_INTRO_STATE, 7);
-    VarSet(VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 2);
-    VarSet(VAR_LITTLEROOT_HOUSES_STATE_MAY, 2);
-    VarSet(VAR_LITTLEROOT_TOWN_STATE, 4);
-    FlagSet(FLAG_SYS_POKEMON_GET);
-    FlagSet(FLAG_SYS_POKEDEX_GET);
-        SetWarpDestination(MAP_GROUP(MAP_FLASHBACK_ROOM), MAP_NUM(MAP_FLASHBACK_ROOM), 0, -1, -1);
         SetMainCallback2(CB2_NewGame);
     }
 }
@@ -177,13 +115,23 @@ void CreateQuickstartHud(void)
     CreateSprite(&sQuickstartHudTemplate, x, y, 0);
 }
 
+}
+
 void Quickstart(void)
 {
     if (!gPaletteFade.active)
     {
         FadeOutBGM(4);
         BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
-        SetMainCallback2(CB2_SkipToNewGame);
+        FlagSet(FLAG_HIDE_INTRO_NPC);
+        VarSet(VAR_LITTLEROOT_INTRO_STATE, 7);
+        VarSet(VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 2);
+        VarSet(VAR_LITTLEROOT_HOUSES_STATE_MAY, 2);
+        VarSet(VAR_LITTLEROOT_TOWN_STATE, 4);
+        FlagSet(FLAG_SYS_POKEMON_GET);
+        FlagSet(FLAG_SYS_POKEDEX_GET);
+        FlagSet(FLAG_ADVENTURE_STARTED);
+        SetWarpDestination(MAP_GROUP(MAP_FLASHBACK_ROOM), MAP_NUM(MAP_FLASHBACK_ROOM), 0, -1, -1);
+        SetMainCallback2(CB2_NewGame);
     }
 }
-
