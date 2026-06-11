@@ -1210,6 +1210,7 @@ struct SaveBlock1
     struct DaycareMon route5DayCareMon;
 #endif
     // sizeof: 0x3???
+    u8 echoStrength[PARTY_SIZE]; // Bond of Éire - Echo Bond rank per party slot (0-100)
 };
 
 extern struct SaveBlock1 *gSaveBlock1Ptr;

@@ -639,3 +639,6 @@ gSpecials::
 	def_special UpdateTrainerCardPhotoIcons
 	def_special StickerManGetBragFlags
 	def_special CheckAddCoins
+    def_special EchoBond_Get
+    def_special EchoBond_Set
+    def_special EchoBond_Increment
