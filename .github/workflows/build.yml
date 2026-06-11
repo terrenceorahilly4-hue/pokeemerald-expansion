@@ -25,5 +25,5 @@ jobs:
       - name: Upload ROM
         uses: actions/upload-artifact@v4
         with:
-          name: Pokemon-Bond-of-Eire
-          path: pokeemerald.gba
+          name: Bond-Of-Eire
+          path: bond_of_eire.gba

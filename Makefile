@@ -26,7 +26,7 @@ REVISION    := 0
 KEEP_TEMPS  ?= 0
 
 # `File name`.gba
-FILE_NAME := poke$(BUILD_NAME)
+FILE_NAME := bond_of_eire
 BUILD_DIR := build
 
 # Compares the ROM to a checksum of the original - only makes sense using when non-modern

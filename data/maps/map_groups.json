@@ -1166,11 +1166,11 @@
     "FlashbackRoom"
   ],
   "gMapGroup_CustomIntro": [
-    "BondOfEire_LittlerootTown",
-    "BondOfEire_BrendansHouse_1F",
-    "BondOfEire_BrendansHouse_2F",
-    "BondOfEire_MaysHouse_1F",
-    "BondOfEire_MaysHouse_2F",
-    "BondOfEire_Campfire"
+    "BOND_RinnuaTown",
+    "BOND_CiaransHouse_1F",
+    "BOND_CiaransHouse_2F",
+    "BOND_NeighboursHouse_1F",
+    "BOND_NeighboursHouse_2F",
+    "BOND_AnTineBheo"
   ]
 }
