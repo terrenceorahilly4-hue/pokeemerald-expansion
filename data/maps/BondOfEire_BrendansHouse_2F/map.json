@@ -1,6 +1,6 @@
 {
   "id": "MAP_BOND_OF_EIRE_BRENDANS_HOUSE_2F",
-  "name": "CiaransHouse",
+  "name": "CiaransHouse_2F",
   "layout": "LAYOUT_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F",
   "music": "MUS_LITTLEROOT",
   "region": "REGION_HOENN",
@@ -23,7 +23,7 @@
   "allow_cycling": false,
   "allow_escaping": false,
   "allow_running": true,
-  "show_map_name": true,
+  "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": []
 }

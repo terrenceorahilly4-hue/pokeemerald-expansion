@@ -1,6 +1,6 @@
 {
   "id": "MAP_BOND_OF_EIRE_MAYS_HOUSE_1F",
-  "name": "NeighboursHouse",
+  "name": "NeighboursHouse_1F",
   "layout": "LAYOUT_LITTLEROOT_TOWN_MAYS_HOUSE_1F",
   "music": "MUS_LITTLEROOT",
   "region": "REGION_HOENN",
@@ -37,7 +37,7 @@
   "allow_cycling": false,
   "allow_escaping": false,
   "allow_running": true,
-  "show_map_name": true,
+  "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": []
 }
