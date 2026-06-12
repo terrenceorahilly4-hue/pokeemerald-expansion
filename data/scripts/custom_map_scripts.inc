@@ -128,15 +128,22 @@ BOND_RinnuaTown_Text_HouseSign3:
 .string "The Ó Murchadha family.\nMind the dog.$"
 
 BOND_RinnuaTown_EventScript_RoadBlockedTrigger::
-lock
+lockall
 applymovement LOCALID_ROADBLOCK, BOND_Movement_RoadBlocked_StepForward
 waitmovement LOCALID_ROADBLOCK
 msgbox BOND_RinnuaTown_Text_RoadBlocked, MSGBOX_DEFAULT
 waitmessage
+applymovement OBJ_EVENT_ID_PLAYER, BOND_Movement_RoadBlocked_PlayerStepBack
+waitmovement OBJ_EVENT_ID_PLAYER
 applymovement LOCALID_ROADBLOCK, BOND_Movement_RoadBlocked_StepBack
 waitmovement LOCALID_ROADBLOCK
-release
+setvar VAR_RINNUA_TOWN_STATE, 1
+releaseall
 end
+
+BOND_Movement_RoadBlocked_PlayerStepBack:
+walk_down
+step_end
 
 BOND_Movement_RoadBlocked_StepForward:
 walk_right
@@ -152,3 +159,32 @@ BOND_RinnuaTown_Text_RoadBlocked:
 BOND_RinnuaTown_EventScript_RoadBlockedDummy::
 release
 end
+
+BOND_RinnuaTown_EventScript_LabSign::
+msgbox BOND_RinnuaTown_Text_LabSign, MSGBOX_SIGN
+end
+
+BOND_RinnuaTown_Text_LabSign:
+.string "Rinnua Town Research Lab\nClosed for renovations.$"
+
+BOND_RinnuaTown_EventScript_WeatherNPC::
+lock
+faceplayer
+msgbox BOND_RinnuaTown_Text_Weather, MSGBOX_DEFAULT
+waitmessage
+release
+end
+
+BOND_RinnuaTown_Text_Weather:
+.string "That sea breeze never gets old.\nYou can taste the salt on your\lips long after you leave this town.$"
+
+BOND_RinnuaTown_EventScript_BondHintNPC::
+lock
+faceplayer
+msgbox BOND_RinnuaTown_Text_BondHint, MSGBOX_DEFAULT
+waitmessage
+release
+end
+
+BOND_RinnuaTown_Text_BondHint:
+.string "The old ones say Pokémon can feel\nwhat you feel. Not like reading\lyour mind — more like knowing\lyour heart.$"

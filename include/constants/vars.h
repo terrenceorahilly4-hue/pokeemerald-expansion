@@ -339,3 +339,4 @@
 #endif // TESTING
 
 #endif // GUARD_CONSTANTS_VARS_H
+#define VAR_RINNUA_TOWN_STATE  0x40
