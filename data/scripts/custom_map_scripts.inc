@@ -127,11 +127,24 @@ BOND_RinnuaTown_Text_HouseSign2:
 BOND_RinnuaTown_Text_HouseSign3:
 .string "The Ó Murchadha family.\nMind the dog.$"
 
-BOND_RinnuaTown_EventScript_RoadBlocked::
+BOND_RinnuaTown_EventScript_RoadBlockedTrigger::
+lock
+applymovement 1, BOND_Movement_RoadBlocked_StepForward
+waitmovement 1
 msgbox BOND_RinnuaTown_Text_RoadBlocked, MSGBOX_DEFAULT
 waitmessage
+applymovement 1, BOND_Movement_RoadBlocked_StepBack
+waitmovement 1
 release
 end
+
+BOND_Movement_RoadBlocked_StepForward:
+walk_right
+step_end
+
+BOND_Movement_RoadBlocked_StepBack:
+walk_left
+step_end
 
 BOND_RinnuaTown_Text_RoadBlocked:
 .string "The north road is blocked.\nLooks like it's been that way\lsince before the storms.$"
