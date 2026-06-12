@@ -41,3 +41,37 @@ end
 CableClub_EventScript_DirectCornerAttendant_Frlg::
 release
 end
+
+@ --- TEMPORARY TEST SCRIPTS (remove after validation) ---
+
+BOND_TestWarp_Campfire::
+msgbox BOND_TestWarp_Campfire_Text, MSGBOX_YESNO
+compare VAR_RESULT, NO
+goto_if_eq BOND_TestWarp_Campfire_End
+warpsilent MAP_BOND_AN_TINE_BHEO, 0
+waitstate
+release
+end
+
+BOND_TestWarp_Campfire_End::
+release
+end
+
+BOND_TestWarp_Campfire_Text:
+.string "A thin trail of smoke rises\n"
+.string "from An Tine Bheo, the old\l"
+.string "campfire clearing.\p"
+.string "Go there now?$"
+
+BOND_Campfire_DebugScript::
+lock
+faceplayer
+setvar VAR_0x8004, 0
+special EchoBond_Get
+copyvar VAR_0x8000, VAR_RESULT
+msgbox BOND_Campfire_DebugText, MSGBOX_DEFAULT
+release
+end
+
+BOND_Campfire_DebugText:
+.string "Echo Bond (lead Pokémon): {STR_VAR_1}$"

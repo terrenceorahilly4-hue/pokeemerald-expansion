@@ -17,17 +17,39 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 4, "y": 4, "elevation": 3,
+      "x": 4,
+      "y": 4,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0, "movement_range_y": 0,
+      "movement_range_x": 0,
+      "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "BondOfEire_Campfire_EventScript_Campfire",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 6,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BOND_Campfire_DebugScript",
+      "flag": "FLAG_TEMP_SKIP_CAMPFIRE_DEBUG"
     }
   ],
   "warp_events": [
-    { "x": 4, "y": 8, "elevation": 3, "dest_map": "MAP_BOND_CIARANS_HOUSE_1F", "dest_warp_id": 255 }
+    {
+      "x": 4,
+      "y": 8,
+      "elevation": 3,
+      "dest_map": "MAP_BOND_CIARANS_HOUSE_1F",
+      "dest_warp_id": 255
+    }
   ],
   "coord_events": [],
   "bg_events": []
