@@ -23,7 +23,6 @@ BOND_AnTineBheo_MapScripts::
 .byte 0
 
 .align 2
-BOND_BirchsLab_MapScripts::
 .byte 0
 
 BondOfEire_EventScript_Mum::
