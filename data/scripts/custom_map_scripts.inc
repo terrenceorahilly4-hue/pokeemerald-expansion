@@ -117,3 +117,12 @@ BOND_RinnuaTown_EventScript_HouseSign3::
 msgbox BOND_RinnuaTown_Text_HouseSign3, MSGBOX_SIGN
 end
 .string "The Ó Murchadha family.\nMind the dog.$"
+
+BOND_RinnuaTown_Text_HouseSign1:
+.string "Ó Briain Residence\nEst. 1987.$"
+
+BOND_RinnuaTown_Text_HouseSign2:
+.string "Rinnua Community Board\lNotice: New Trainer\lregistration open at the Lab.$"
+
+BOND_RinnuaTown_Text_HouseSign3:
+.string "The Ó Murchadha family.\nMind the dog.$"
