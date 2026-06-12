@@ -17,16 +17,23 @@ end
 BondOfEire_Text_Mum:
 .string "Ciarán, your father would be so proud.$"
 BondOfEire_Campfire_EventScript_Campfire::
-setvar VAR_0x8004, 0
-special EchoBond_Get
-copyvar VAR_0x8000, VAR_RESULT
-msgbox BondOfEire_Campfire_Text_BondLevel, MSGBOX_DEFAULT
+    lock
+    faceplayer
+    setvar VAR_0x8004, 0
+    special EchoBond_Get
+    copyvar VAR_0x8000, VAR_RESULT
+    msgbox BondOfEire_Campfire_Text_BondLevel, MSGBOX_DEFAULT
     waitmessage
-    waitmessage
-setvar VAR_0x8005, 5
-special EchoBond_Increment
+    setvar VAR_0x8004, 0
+    setvar VAR_0x8005, 5
+    special EchoBond_Increment
+    release
+    end
+
 BondOfEire_Campfire_Text_BondLevel:
-.string "The campfire crackles warmly.\nRockruff feels a little closer to you.$"
+    .string "The campfire crackles warmly.
+Rockruff feels a little closer to you.$"
+"
 BrendansHouse_1F_EventScript_Mum::
 
 BOND_RinnuaTown_EventScript_Sign::
