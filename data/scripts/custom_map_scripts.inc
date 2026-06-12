@@ -147,7 +147,7 @@ walk_left
 step_end
 
 BOND_RinnuaTown_Text_RoadBlocked:
-.string "The north road is blocked.\nLooks like it's been that way\lsince before the storms.$"
+.string "You’re not thinking of going out there\nalone, are you? The wild Pokémon\lon the north road have been restless.\lNo one’s allowed past without a partner.$"
 
 BOND_RinnuaTown_EventScript_RoadBlockedDummy::
 release
