@@ -148,3 +148,7 @@ step_end
 
 BOND_RinnuaTown_Text_RoadBlocked:
 .string "The north road is blocked.\nLooks like it's been that way\lsince before the storms.$"
+
+BOND_RinnuaTown_EventScript_RoadBlockedDummy::
+release
+end
