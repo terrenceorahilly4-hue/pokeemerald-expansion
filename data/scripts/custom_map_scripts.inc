@@ -21,6 +21,8 @@ setvar VAR_0x8004, 0
 special EchoBond_Get
 copyvar VAR_0x8000, VAR_RESULT
 msgbox BondOfEire_Campfire_Text_BondLevel, MSGBOX_DEFAULT
+    waitmessage
+    waitmessage
 setvar VAR_0x8005, 5
 special EchoBond_Increment
 BondOfEire_Campfire_Text_BondLevel:
@@ -70,6 +72,7 @@ setvar VAR_0x8004, 0
 special EchoBond_Get
 copyvar VAR_0x8000, VAR_RESULT
 msgbox BOND_Campfire_DebugText, MSGBOX_DEFAULT
+    waitmessage
 release
 end
 
