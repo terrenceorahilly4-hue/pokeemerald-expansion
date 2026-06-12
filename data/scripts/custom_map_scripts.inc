@@ -129,12 +129,12 @@ BOND_RinnuaTown_Text_HouseSign3:
 
 BOND_RinnuaTown_EventScript_RoadBlockedTrigger::
 lock
-applymovement 1, BOND_Movement_RoadBlocked_StepForward
-waitmovement 1
+applymovement LOCALID_ROADBLOCK, BOND_Movement_RoadBlocked_StepForward
+waitmovement LOCALID_ROADBLOCK
 msgbox BOND_RinnuaTown_Text_RoadBlocked, MSGBOX_DEFAULT
 waitmessage
-applymovement 1, BOND_Movement_RoadBlocked_StepBack
-waitmovement 1
+applymovement LOCALID_ROADBLOCK, BOND_Movement_RoadBlocked_StepBack
+waitmovement LOCALID_ROADBLOCK
 release
 end
 

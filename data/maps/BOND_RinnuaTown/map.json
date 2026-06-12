@@ -21,7 +21,7 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "BOND_RinnuaTown_EventScript_RoadBlockedDummy",
       "flag": "FLAG_TEMP_SKIP_ROADBLOCKED_TEST",
-      "local_id": 1
+      "local_id": "LOCALID_ROADBLOCK"
     }
   ],
   "warp_events": [
