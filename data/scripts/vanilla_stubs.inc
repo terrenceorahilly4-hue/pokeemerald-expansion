@@ -1,0 +1,6 @@
+.align 2
+
+CableClub_EventScript_WirelessClubAttendant_Frlg::
+CableClub_EventScript_DirectCornerAttendant_Frlg::
+BrendansHouse_1F_EventScript_Mum::
+end
