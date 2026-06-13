@@ -187,4 +187,4 @@ release
 end
 
 BOND_RinnuaTown_Text_BondHint:
-.string "The old ones say Pokémon can feel\nwhat you feel. Not like reading\lyour mind — more like knowing\lyour heart.$"
+.string "The old ones say Pokémon can feel\nwhat you feel. Not like reading\lyour mind -- more like knowing\lyour heart.$"
