@@ -63,4 +63,40 @@ BOND_Cliff_Text_AlreadyBonded:
 BOND_Cliff_Text_NoSpace:
 .string "Your party and storage are full.$"
 
+
+BOND_RinnuaTown_MapScripts::
+    .byte 0
+
+BOND_CiaransHouse_1F_MapScripts::
+    .byte 0
+
+BOND_CiaransHouse_2F_MapScripts::
+    .byte 0
+
+BOND_NeighboursHouse_1F_MapScripts::
+    .byte 0
+
+BOND_NeighboursHouse_2F_MapScripts::
+    .byte 0
+
+BOND_AnTineBheo_MapScripts::
+    .byte 0
+
+BOND_RinnuaTown_EventScript_RoadBlockedDummy::
+BOND_RinnuaTown_EventScript_WeatherNPC::
+BOND_RinnuaTown_EventScript_BondHintNPC::
+BOND_RinnuaTown_EventScript_RoadBlockedTrigger::
+BOND_RinnuaTown_EventScript_Sign::
+BOND_RinnuaTown_EventScript_HouseSign1::
+BOND_RinnuaTown_EventScript_HouseSign2::
+BOND_RinnuaTown_EventScript_HouseSign3::
+BOND_RinnuaTown_EventScript_LabSign::
+BondOfEire_EventScript_Mum::
+BondOfEire_Campfire_EventScript_Campfire::
+BOND_Campfire_DebugScript::
+    lockall
+    msgbox BOND_Cliff_Text_AlreadyBonded, MSGBOX_DEFAULT
+    releaseall
+    end
+
 .endif @ BOND_CUSTOM_SCRIPTS_ASSEMBLED
