@@ -1,3 +1,4 @@
+.section .text
 #include "config/general.h"
 #include "config/battle.h"
 #include "config/item.h"
