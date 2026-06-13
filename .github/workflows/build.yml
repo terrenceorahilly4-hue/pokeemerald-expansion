@@ -19,8 +19,14 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y gcc-arm-none-eabi libnewlib-arm-none-eabi libpng-dev python3
 
-      - name: Build ROM
-        run: |
+      
+      - name: Validate Map and Layout JSON Integrity
+        run: make json
+
+      - name: Execute Custom Intro and NPC Object Validations
+        run: python3 tools/intro_validator.py
+
+      - name: Build ROM Target
           make clean && make clean
           make clean && make -j$(nproc)
 
