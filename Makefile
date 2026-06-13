@@ -319,7 +319,7 @@ ASM_SRCS := $(wildcard $(ASM_SUBDIR)/*.s)
 ASM_OBJS := $(patsubst $(ASM_SUBDIR)/%.s,$(ASM_BUILDDIR)/%.o,$(ASM_SRCS))
 
 DATA_ASM_SRCS := $(wildcard $(DATA_ASM_SUBDIR)/*.s)
-DATA_ASM_SRCS := $(filter-out data/maps/BOND_%/scripts.inc, $(DATA_ASM_SRCS))
+DATA_ASM_SRCS := $(filter-out data/maps/BondOfEire_%/scripts.inc, $(DATA_ASM_SRCS))
 DATA_ASM_OBJS := $(patsubst $(DATA_ASM_SUBDIR)/%.s,$(DATA_ASM_BUILDDIR)/%.o,$(DATA_ASM_SRCS))
 
 MID_SRCS := $(wildcard $(MID_SUBDIR)/*.mid)
