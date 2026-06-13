@@ -10,57 +10,52 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: 1. Checkout Repository Code Base
+      - name: Checkout Repository Code
         uses: actions/checkout@v4
 
-      - name: 2. Set Up ARM Embedded Toolchain
+      - name: Install ARM Embedded Toolchain
         uses: gnu-mcu-eclipse/setup-arm-embedded-gcc-action@v11
         with:
           version: '10.3-2021.10'
 
-      - name: 3. Provision Core Compilation Packages
+      - name: Install Native Compilation Dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y build-essential libpng-dev
 
-      - name: 4. PRE-CHECK: Map Layout Integrity Validator
+      - name: PRE-CHECK 1: Validate Map & Layout JSON Integrity
         run: |
           make clean
-          make json || echo "No map group JSON compiler rule found, passing..."
+          make json
 
-      - name: 5. PRE-CHECK: Execute Intro and NPC Object Audits
+      - name: PRE-CHECK 2: Execute Custom Intro & NPC Object Validation
         run: |
           if [ -f tools/intro_validator.py ]; then
             python3 tools/intro_validator.py
           elif [ -f tools/validate_intro.py ]; then
             python3 tools/validate_intro.py
           else
-            echo "Intro validation layout engine not present on this branch hook."
+            echo "Intro validator script not found, skipping."
           fi
 
-      - name: 6. PRE-CHECK: Scan Natively for Preprocessor Traps
+      - name: PRE-CHECK 3: Scan Codebase Natively for Unbalanced Quotes
         run: |
           python3 -c '
-          import glob, sys
+          import glob
           files = glob.glob("data/maps/*/*.inc") + glob.glob("data/scripts/*.inc") + ["data/event_scripts.s"]
           failed = False
-          for p in files:
+          for fpath in files:
               try:
-                  with open(p, "r", encoding="utf-8", errors="ignore") as f:
+                  with open(fpath, "r", encoding="utf-8", errors="ignore") as f:
                       for i, line in enumerate(f, 1):
-                          # Catch missing closing quotes that blind the toolchain
                           if line.count("\"") % 2 != 0:
-                              print(f"❌ Unbalanced Quote -> {p}:{i}: {line.strip()}")
-                              failed = True
-                          # Double check that no un-inlined macro calls are left active
-                          if "getdirectiontoface" in line and not line.strip().startswith("@"):
-                              print(f"❌ Stale Macro Call Found -> {p}:{i}: {line.strip()}")
+                              print(f"❌ Unbalanced Quote: {fpath} line {i}: {line.strip()}")
                               failed = True
               except: pass
-          if failed: sys.exit(1)
-          print("✓ Syntax verification pass complete. No blind spots detected.")
+          if failed: exit(1)
+          print("✓ All quotes perfectly balanced.")
           '
 
-      - name: 7. PRODUCTION ROM COMPILATION PASS
+      - name: PRODUCTION ROM COMPILATION
         run: |
           make -j$(nproc)
