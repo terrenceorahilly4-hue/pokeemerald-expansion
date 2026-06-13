@@ -35,27 +35,11 @@ jobs:
           elif [ -f tools/validate_intro.py ]; then
             python3 tools/validate_intro.py
           else
-            echo "Intro validation script not found, proceeding..."
+            echo "Intro validation layout engine not present on this branch, passing..."
           fi
 
       - name: 6. PRE-CHECK: Scan Natively for Preprocessor Traps
-        run: |
-          python3 -c '
-          import glob, sys
-          files = glob.glob("data/maps/*/*.inc") + glob.glob("data/scripts/*.inc") + ["data/event_scripts.s"]
-          failed = False
-          for p in files:
-              try:
-                  with open(p, "r", encoding="utf-8", errors="ignore") as f:
-                      for i, line in enumerate(f, 1):
-                          if line.count("\"") % 2 != 0:
-                              print(f"❌ Unbalanced Quote -> {p}:{i}: {line.strip()}")
-                              failed = True
-              except: pass
-          if failed: sys.exit(1)
-          print("✓ Syntax verification pass complete. No blind spots detected.")
-          '
+        run: python3 tools/preproc_check.py
 
       - name: 7. PRODUCTION ROM COMPILATION PASS
-        run: |
-          make -j$(nproc)
+        run: make -j$(nproc)
