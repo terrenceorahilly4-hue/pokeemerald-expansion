@@ -1,4 +1,3 @@
 BOND_Cliff_MapScripts::
-.byte 0
-
+	.byte 0
 
