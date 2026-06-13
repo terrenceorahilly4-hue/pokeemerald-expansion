@@ -70,7 +70,6 @@ BOND_RinnuaTown_MapScripts::
 BOND_CiaransHouse_1F_MapScripts::
     .byte 0
 
-BOND_CiaransHouse_2F_MapScripts::
     .byte 0
 
 BOND_NeighboursHouse_1F_MapScripts::
