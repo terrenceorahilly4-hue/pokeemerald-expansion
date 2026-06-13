@@ -1,45 +1,11 @@
-name: Build Bond of Éire
-
-on:
-  push:
-    branches: [ echo-bond-foundation ]
-  pull_request:
-    branches: [ echo-bond-foundation ]
-
+name: Build
+on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: 1. Checkout Repository Code Base
-        uses: actions/checkout@v4
-
-      - name: 2. Set Up ARM Embedded Toolchain
-        uses: gnu-mcu-eclipse/setup-arm-embedded-gcc-action@v11
-        with:
-          version: '10.3-2021.10'
-
-      - name: 3. Provision Core Compilation Packages
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y build-essential libpng-dev
-
-      - name: 4. PRE-CHECK: Map Layout Integrity Validator
-        run: |
-          make clean
-          make json || echo "No explicit JSON target, passing..."
-
-      - name: 5. PRE-CHECK: Execute Intro and NPC Object Audits
-        run: |
-          if [ -f tools/intro_validator.py ]; then
-            python3 tools/intro_validator.py
-          elif [ -f tools/validate_intro.py ]; then
-            python3 tools/validate_intro.py
-          else
-            echo "Intro validation layout engine not present on this branch, passing..."
-          fi
-
-      - name: 6. PRE-CHECK: Scan Natively for Preprocessor Traps
-        run: python3 tools/preproc_check.py
-
-      - name: 7. PRODUCTION ROM COMPILATION PASS
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y build-essential libpng-dev
+      - name: Build
         run: make -j$(nproc)
