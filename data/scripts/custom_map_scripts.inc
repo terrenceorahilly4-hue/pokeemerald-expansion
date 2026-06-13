@@ -1,3 +1,6 @@
+.ifndef BOND_CUSTOM_SCRIPTS_ASSEMBLED
+.set BOND_CUSTOM_SCRIPTS_ASSEMBLED, 1
+
 BOND_RinnuaTown_Text_BondHint::
 .string "The old ones say Pokémon can feel\n"
 .string "what you feel. Not like reading\n"
@@ -59,3 +62,5 @@ BOND_Cliff_Text_AlreadyBonded:
 
 BOND_Cliff_Text_NoSpace:
 .string "Your party and storage are full.$"
+
+.endif @ BOND_CUSTOM_SCRIPTS_ASSEMBLED
