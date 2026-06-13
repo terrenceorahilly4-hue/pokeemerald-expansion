@@ -1489,3 +1489,4 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 .include "data/maps/BOND_AnTineBheo/scripts.inc"
 .include "data/maps/BOND_Cliff/scripts.inc"
 .include "data/scripts/vanilla_stubs.inc"
+# Build Trigger: Force Registry Recompile
