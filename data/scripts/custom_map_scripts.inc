@@ -191,26 +191,42 @@ BOND_RinnuaTown_Text_BondHint:
 
 BOND_Cliff_EventScript_Encounter::
     lockall
+    faceplayer
+    playmoncry SPECIES_ROCKRUFF, CRY_MODE_ENCOUNTER
     msgbox BOND_Cliff_Text_EncounterThesis, MSGBOX_DEFAULT
+    waitmessage
+    waitmoncry
+    @ Give the player Rockruff (Level 5, No Item)
+    givemon SPECIES_ROCKRUFF, 5, ITEM_NONE
+    compare VAR_RESULT, 2
+    goto_if_eq BOND_Cliff_EventScript_PartyFull
+    playfanfare MUS_OBTAIN_ITEM
+    msgbox BOND_Cliff_Text_ObtainedRockruff, MSGBOX_DEFAULT
+    waitmessage
+    waitfanfare
+    @ Echo Bond tracking initialized
+    setvar VAR_ECHO_BOND_LEVEL, 60
+    setvar VAR_BOND_CLIFF_STATE, 1
+    @ Hide the wild overworld sprite forever
+    setflag FLAG_HIDE_BOND_CLIFF_ROCKRUFF
+    removeobject 1
+    @ Trigger the follower engine to put Rockruff behind player
+    setflag FLAG_SYS_FOLLOWER_READY
+    setfollower 1, 1
+    releaseall
+    end
+
+BOND_Cliff_EventScript_PartyFull::
+    msgbox BOND_Cliff_Text_PartyFull, MSGBOX_DEFAULT
+    waitmessage
     releaseall
     end
 
 BOND_Cliff_Text_EncounterThesis:
     .string "Rockruff steps forward on the windy cliff.\nNo cage. No battle. Pure trust.$"
 
-BOND_RinnuaTown_EventScript_CliffGuide::
-    lock
-    faceplayer
-    msgbox BOND_RinnuaTown_Text_CliffGuide, MSGBOX_YESNO
-    goto_if_eq VAR_RESULT, YES, BOND_RinnuaTown_EventScript_WarpToCliff
-    release
-    end
+BOND_Cliff_Text_ObtainedRockruff:
+    .string "Rockruff joined your team!$"
 
-BOND_RinnuaTown_EventScript_WarpToCliff::
-    warp MAP_BOND_CLIFF, 255, 10, 10
-    waitstate
-    release
-    end
-
-BOND_RinnuaTown_Text_CliffGuide:
-    .string "The coastal cliffs are just ahead.\nWould you like to go there now?$"
+BOND_Cliff_Text_PartyFull:
+    .string "You have no room for Rockruff...$"
