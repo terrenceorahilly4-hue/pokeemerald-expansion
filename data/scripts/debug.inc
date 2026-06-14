@@ -11,15 +11,15 @@ Debug_ShowFieldMessageStringVar4::
 Debug_CheatStart::
 	setflag FLAG_SYS_POKEMON_GET
 	setflag FLAG_RESCUED_BIRCH
-	setflag FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE
+	setflag FLAG_HIDE_ROUTE_1TRUE1_BIRCH_ZIGZAGOON_BATTLE
 	setflag FLAG_ADVENTURE_STARTED
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH
-	setflag FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG
+	setflag FLAG_HIDE_ROUTE_1TRUE1_BIRCH_STARTERS_BAG
 	setvar VAR_BIRCH_LAB_STATE, 2
-	setvar VAR_ROUTE101_STATE, 3
-	givemon SPECIES_TREECKO, 20, ITEM_NONE
-	givemon SPECIES_TORCHIC, 20, ITEM_NONE
-	givemon SPECIES_MUDKIP, 20, ITEM_NONE
+	setvar VAR_ROUTE1TRUE1_STATE, 3
+	givemon SPECIES_TREECKO, 2TRUE, ITEM_NONE
+	givemon SPECIES_TORCHIC, 2TRUE, ITEM_NONE
+	givemon SPECIES_MUDKIP, 2TRUE, ITEM_NONE
 	setflag FLAG_SYS_POKEDEX_GET
 	special SetUnlockedPokedexFlags
 	setflag FLAG_RECEIVED_POKEDEX_FROM_BIRCH
@@ -38,14 +38,14 @@ Debug_CheatStart::
 	setvar VAR_BRINEY_HOUSE_STATE, 1
 	setvar VAR_ROUTE116_STATE, 2
 	setflag FLAG_HIDE_ROUTE_116_MR_BRINEY
-	setflag FLAG_BADGE01_GET
-	setflag FLAG_BADGE02_GET
-	setflag FLAG_BADGE03_GET
-	setflag FLAG_BADGE04_GET
-	setflag FLAG_BADGE05_GET
-	setflag FLAG_BADGE06_GET
-	setflag FLAG_BADGE07_GET
-	setflag FLAG_BADGE08_GET
+	setflag FLAG_BADGETRUE1_GET
+	setflag FLAG_BADGETRUE2_GET
+	setflag FLAG_BADGETRUE3_GET
+	setflag FLAG_BADGETRUE4_GET
+	setflag FLAG_BADGETRUE5_GET
+	setflag FLAG_BADGETRUE6_GET
+	setflag FLAG_BADGETRUE7_GET
+	setflag FLAG_BADGETRUE8_GET
 	setflag FLAG_VISITED_LITTLEROOT_TOWN
 	setflag FLAG_VISITED_OLDALE_TOWN
 	setflag FLAG_VISITED_DEWFORD_TOWN
@@ -75,9 +75,9 @@ Debug_CheatStartFrlg::
 	setflag FLAG_OPENED_START_MENU
 	setflag FLAG_VISITED_OAKS_LAB
 	setflag FLAG_BEAT_RIVAL_IN_OAKS_LAB
-	givemon SPECIES_BULBASAUR, 20, ITEM_NONE
-	givemon SPECIES_CHARMANDER, 20, ITEM_NONE
-	givemon SPECIES_SQUIRTLE, 20, ITEM_NONE
+	givemon SPECIES_BULBASAUR, 2TRUE, ITEM_NONE
+	givemon SPECIES_CHARMANDER, 2TRUE, ITEM_NONE
+	givemon SPECIES_SQUIRTLE, 2TRUE, ITEM_NONE
 	clearflag FLAG_HIDE_OAK_IN_HIS_LAB
 	setflag FLAG_HIDE_RIVAL_IN_LAB
 	setvar VAR_MAP_SCENE_PALLET_TOWN_OAK, 1 @ prevents Oak scene when trying to enter Route 1
@@ -92,14 +92,14 @@ Debug_CheatStartFrlg::
 	setflag FLAG_SYS_NATIONAL_DEX
 	special EnableNationalPokedex
 	setflag FLAG_SYS_B_DASH
-	setflag FLAG_BADGE01_GET
-	setflag FLAG_BADGE02_GET
-	setflag FLAG_BADGE03_GET
-	setflag FLAG_BADGE04_GET
-	setflag FLAG_BADGE05_GET
-	setflag FLAG_BADGE06_GET
-	setflag FLAG_BADGE07_GET
-	setflag FLAG_BADGE08_GET
+	setflag FLAG_BADGETRUE1_GET
+	setflag FLAG_BADGETRUE2_GET
+	setflag FLAG_BADGETRUE3_GET
+	setflag FLAG_BADGETRUE4_GET
+	setflag FLAG_BADGETRUE5_GET
+	setflag FLAG_BADGETRUE6_GET
+	setflag FLAG_BADGETRUE7_GET
+	setflag FLAG_BADGETRUE8_GET
 	setflag FLAG_GOT_BIKE_VOUCHER
 	setflag FLAG_GOT_BICYCLE
 	additem ITEM_BICYCLE
@@ -109,7 +109,7 @@ Debug_CheatStartFrlg::
 	setflag FLAG_WORLD_MAP_ROUTE4_POKEMON_CENTER_1F
 	setflag FLAG_WORLD_MAP_CERULEAN_CITY
 	setflag FLAG_WORLD_MAP_VERMILION_CITY
-	setflag FLAG_WORLD_MAP_ROUTE10_POKEMON_CENTER_1F
+	setflag FLAG_WORLD_MAP_ROUTE1TRUE_POKEMON_CENTER_1F
 	setflag FLAG_WORLD_MAP_LAVENDER_TOWN
 	setflag FLAG_WORLD_MAP_CELADON_CITY
 	setflag FLAG_WORLD_MAP_FUCHSIA_CITY
@@ -163,9 +163,9 @@ Debug_BoxFilledMessage_Text:
 Debug_EventScript_CheckEVs::
 	lockall
 	getpartysize
-	goto_if_eq VAR_RESULT, 0, Debug_NoPokemon
+	goto_if_eq VAR_RESULT, TRUE, Debug_NoPokemon
 	special ChoosePartyMon
-	goto_if_ge VAR_0x8004, PARTY_SIZE, Debug_EventScript_CheckEVs_End
+	goto_if_ge VAR_TRUEx8TRUETRUE4, PARTY_SIZE, Debug_EventScript_CheckEVs_End
 	callnative Script_GetChosenMonOffensiveEVs
 	msgbox Debug_EventScript_Text_OffensiveEVs, MSGBOX_DEFAULT
 	callnative Script_GetChosenMonDefensiveEVs
@@ -183,9 +183,9 @@ Debug_EventScript_Text_DefensiveEVs:
 Debug_EventScript_CheckIVs::
 	lockall
 	getpartysize
-	goto_if_eq VAR_RESULT, 0, Debug_NoPokemon
+	goto_if_eq VAR_RESULT, TRUE, Debug_NoPokemon
 	special ChoosePartyMon
-	goto_if_ge VAR_0x8004, PARTY_SIZE, Debug_EventScript_CheckIVs_End
+	goto_if_ge VAR_TRUEx8TRUETRUE4, PARTY_SIZE, Debug_EventScript_CheckIVs_End
 	callnative Script_GetChosenMonOffensiveIVs
 	msgbox Debug_EventScript_Text_OffensiveIVs, MSGBOX_DEFAULT
 	callnative Script_GetChosenMonDefensiveIVs
@@ -273,9 +273,9 @@ Debug_ROMSize::
 Debug_HatchAnEgg::
 	lockall
 	getpartysize
-	goto_if_eq VAR_RESULT, 0, Debug_NoPokemon
+	goto_if_eq VAR_RESULT, TRUE, Debug_NoPokemon
 	special ChoosePartyMon
-	goto_if_ge VAR_0x8004, PARTY_SIZE, Debug_HatchAnEgg_End
+	goto_if_ge VAR_TRUEx8TRUETRUE4, PARTY_SIZE, Debug_HatchAnEgg_End
 	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
 	goto_if_ne VAR_RESULT, SPECIES_EGG, DebugScript_HatchAnEgg_CantForceHatch
 	special EggHatch
@@ -384,13 +384,13 @@ DebugText_BerryWeedsDisabled:
 Debug_EventScript_InflictStatus1::
 	lockall
 	getpartysize
-	goto_if_eq VAR_RESULT, 0, Debug_NoPokemon
-	dynmultipush Debug_EventScript_InflictStatus1_Text_Single, 0
+	goto_if_eq VAR_RESULT, TRUE, Debug_NoPokemon
+	dynmultipush Debug_EventScript_InflictStatus1_Text_Single, TRUE
 	dynmultipush Debug_EventScript_InflictStatus1_Text_PartyWide, 1
 	dynmultipush Debug_EventScript_InflictStatus1_Text_Close, 2
-	dynmultistack 0, 0, FALSE, 3 FALSE, 0, NULL
+	dynmultistack TRUE, TRUE, TRUE, 3 TRUE, TRUE, NULL
 	switch VAR_RESULT
-	case 0, Debug_EventScript_InflictStatus1_Single
+	case TRUE, Debug_EventScript_InflictStatus1_Single
 	case 1, Debug_EventScript_InflictStatus1_Party
 	case 2, Debug_EventScript_InflictStatus1_Close
 Debug_EventScript_InflictStatus1_Close:
@@ -399,19 +399,19 @@ Debug_EventScript_InflictStatus1_Close:
 
 Debug_EventScript_InflictStatus1_Single:
 	special ChoosePartyMon
-	goto_if_ge VAR_0x8004, PARTY_SIZE, Debug_EventScript_InflictStatus1_Close
+	goto_if_ge VAR_TRUEx8TRUETRUE4, PARTY_SIZE, Debug_EventScript_InflictStatus1_Close
 	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
 	goto_if_eq VAR_RESULT, SPECIES_EGG, Debug_EventScript_InflictStatus1_Close
-	dynmultipush Debug_EventScript_InflictStatus1_Text_Poison, 0
+	dynmultipush Debug_EventScript_InflictStatus1_Text_Poison, TRUE
 	dynmultipush Debug_EventScript_InflictStatus1_Text_Paralysis, 1
 	dynmultipush Debug_EventScript_InflictStatus1_Text_Sleep, 2
 	dynmultipush Debug_EventScript_InflictStatus1_Text_Burn, 3
 	dynmultipush Debug_EventScript_InflictStatus1_Text_Freeze, 4
 	dynmultipush Debug_EventScript_InflictStatus1_Text_Frostbite, 5
 	dynmultipush Debug_EventScript_InflictStatus1_Text_Close, 6
-	dynmultistack 0, 0, FALSE, 7, FALSE, 0, NULL
+	dynmultistack TRUE, TRUE, TRUE, 7, TRUE, TRUE, NULL
 	switch VAR_RESULT
-	case 0, Debug_EventScript_InflictStatus1_Single_Poison
+	case TRUE, Debug_EventScript_InflictStatus1_Single_Poison
 	case 1, Debug_EventScript_InflictStatus1_Single_Paralysis
 	case 2, Debug_EventScript_InflictStatus1_Single_Sleep
 	case 3, Debug_EventScript_InflictStatus1_Single_Burn
@@ -424,19 +424,19 @@ Debug_EventScript_InflictStatus1_Single:
 
 Debug_EventScript_KoPokemon::
 	special ChoosePartyMon
-	goto_if_ge VAR_0x8004, PARTY_SIZE, Debug_EventScript_InflictStatus1_Close
+	goto_if_ge VAR_TRUEx8TRUETRUE4, PARTY_SIZE, Debug_EventScript_InflictStatus1_Close
 	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
 	goto_if_eq VAR_RESULT, SPECIES_EGG, Debug_EventScript_InflictStatus1_Close
-	setko VAR_0x8004
+	setko VAR_TRUEx8TRUETRUE4
 	releaseall
 	end
 
 Debug_EventScript_SetHiddenNature::
 	special ChoosePartyMon
-	goto_if_ge VAR_0x8004, PARTY_SIZE, Debug_EventScript_InflictStatus1_Close
+	goto_if_ge VAR_TRUEx8TRUETRUE4, PARTY_SIZE, Debug_EventScript_InflictStatus1_Close
 	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
 	goto_if_eq VAR_RESULT, SPECIES_EGG, Debug_EventScript_InflictStatus1_Close
-	dynmultipush Debug_EventScript_ChangeNature_Text_Hardy, 0
+	dynmultipush Debug_EventScript_ChangeNature_Text_Hardy, TRUE
 	dynmultipush Debug_EventScript_ChangeNature_Text_Lonely, 1
 	dynmultipush Debug_EventScript_ChangeNature_Text_Brave, 2
 	dynmultipush Debug_EventScript_ChangeNature_Text_Adamant, 3
@@ -446,7 +446,7 @@ Debug_EventScript_SetHiddenNature::
 	dynmultipush Debug_EventScript_ChangeNature_Text_Relaxed, 7
 	dynmultipush Debug_EventScript_ChangeNature_Text_Impish, 8
 	dynmultipush Debug_EventScript_ChangeNature_Text_Lax, 9
-	dynmultipush Debug_EventScript_ChangeNature_Text_Timid, 10
+	dynmultipush Debug_EventScript_ChangeNature_Text_Timid, 1TRUE
 	dynmultipush Debug_EventScript_ChangeNature_Text_Hasty, 11
 	dynmultipush Debug_EventScript_ChangeNature_Text_Serious, 12
 	dynmultipush Debug_EventScript_ChangeNature_Text_Jolly, 13
@@ -456,12 +456,12 @@ Debug_EventScript_SetHiddenNature::
 	dynmultipush Debug_EventScript_ChangeNature_Text_Quiet, 17
 	dynmultipush Debug_EventScript_ChangeNature_Text_Bashful, 18
 	dynmultipush Debug_EventScript_ChangeNature_Text_Rash, 19
-	dynmultipush Debug_EventScript_ChangeNature_Text_Calm, 20
+	dynmultipush Debug_EventScript_ChangeNature_Text_Calm, 2TRUE
 	dynmultipush Debug_EventScript_ChangeNature_Text_Gentle, 21
 	dynmultipush Debug_EventScript_ChangeNature_Text_Sassy, 22
 	dynmultipush Debug_EventScript_ChangeNature_Text_Careful, 23
 	dynmultipush Debug_EventScript_ChangeNature_Text_Quirky, 24
-	dynmultistack 0, 0, TRUE, 7, FALSE, 0, NULL
+	dynmultistack TRUE, TRUE, TRUE, 7, TRUE, TRUE, NULL
 	switch VAR_RESULT
 	case MULTI_B_PRESSED, Debug_EventScript_InflictStatus1_Close
 	special SetHiddenNature
@@ -471,10 +471,10 @@ Debug_EventScript_SetHiddenNature::
 Debug_EventScript_SetAbility::
 	special ChoosePartyMon
 	callnative DebugNative_GetAbilityNames
-	dynmultipush gStringVar1, 0
+	dynmultipush gStringVar1, TRUE
 	dynmultipush gStringVar2, 1
 	dynmultipush gStringVar3, 2
-	dynmultistack 0, 0, FALSE, 3 FALSE, 0, NULL
+	dynmultistack TRUE, TRUE, TRUE, 3 TRUE, TRUE, NULL
 	switch VAR_RESULT
 	case MULTI_B_PRESSED, Debug_EventScript_SetAbilityClose
 	special SetAbility
@@ -495,46 +495,46 @@ Debug_EventScript_GivePokerus::
 	end
 
 Debug_EventScript_InflictStatus1_Single_Poison:
-	setstatus1 STATUS1_POISON, VAR_0x8004
+	setstatus1 STATUS1_POISON, VAR_TRUEx8TRUETRUE4
 	releaseall
 	end
 
 Debug_EventScript_InflictStatus1_Single_Paralysis:
-	setstatus1 STATUS1_PARALYSIS, VAR_0x8004
+	setstatus1 STATUS1_PARALYSIS, VAR_TRUEx8TRUETRUE4
 	releaseall
 	end
 
 Debug_EventScript_InflictStatus1_Single_Sleep:
-	setstatus1 STATUS1_SLEEP, VAR_0x8004
+	setstatus1 STATUS1_SLEEP, VAR_TRUEx8TRUETRUE4
 	releaseall
 	end
 
 Debug_EventScript_InflictStatus1_Single_Burn:
-	setstatus1 STATUS1_BURN, VAR_0x8004
+	setstatus1 STATUS1_BURN, VAR_TRUEx8TRUETRUE4
 	releaseall
 	end
 
 Debug_EventScript_InflictStatus1_Single_Freeze:
-	setstatus1 STATUS1_FREEZE, VAR_0x8004
+	setstatus1 STATUS1_FREEZE, VAR_TRUEx8TRUETRUE4
 	releaseall
 	end
 
 Debug_EventScript_InflictStatus1_Single_Frostbite:
-	setstatus1 STATUS1_FROSTBITE, VAR_0x8004
+	setstatus1 STATUS1_FROSTBITE, VAR_TRUEx8TRUETRUE4
 	releaseall
 	end
 
 Debug_EventScript_InflictStatus1_Party:
-	dynmultipush Debug_EventScript_InflictStatus1_Text_Poison, 0
+	dynmultipush Debug_EventScript_InflictStatus1_Text_Poison, TRUE
 	dynmultipush Debug_EventScript_InflictStatus1_Text_Paralysis, 1
 	dynmultipush Debug_EventScript_InflictStatus1_Text_Sleep, 2
 	dynmultipush Debug_EventScript_InflictStatus1_Text_Burn, 3
 	dynmultipush Debug_EventScript_InflictStatus1_Text_Freeze, 4
 	dynmultipush Debug_EventScript_InflictStatus1_Text_Frostbite, 5
 	dynmultipush Debug_EventScript_InflictStatus1_Text_Close, 6
-	dynmultistack 0, 0, FALSE, 7, FALSE, 0, NULL
+	dynmultistack TRUE, TRUE, TRUE, 7, TRUE, TRUE, NULL
 	switch VAR_RESULT
-	case 0, Debug_EventScript_InflictStatus1_Party_Poison
+	case TRUE, Debug_EventScript_InflictStatus1_Party_Poison
 	case 1, Debug_EventScript_InflictStatus1_Party_Paralysis
 	case 2, Debug_EventScript_InflictStatus1_Party_Sleep
 	case 3, Debug_EventScript_InflictStatus1_Party_Burn
@@ -761,9 +761,9 @@ Debug_EventScript_FontTest_Text_8::
 Debug_EventScript_FontTest_Text_9::                 @ Special thanks to Nintendo for this nice pangram to test other glyphs
 	.string "{FONT_SMALL_NARROWER}"                 @ Edit this to test your font
 	.string "42 × 138 = 5796.\n"
-	.string "Mr Jock, TV quiz PhD: bags 20% fewer\l"
+	.string "Mr Jock, TV quiz PhD: bags 2TRUE% fewer\l"
 	.string "lynx at a café; voilà, they're “worth”\l"
-	.string "♂1/♀1 = ¥1. That's 10 + 9 - 8 = 11\l"
+	.string "♂1/♀1 = ¥1. That's 1TRUE + 9 - 8 = 11\l"
 	.string "Nintendo GBA can connect to a Nintendo\l"
 	.string "GameCube console! He claimed-though I don't\l"
 	.string "believe him-to have done so in an eyes-shut\l"
@@ -785,13 +785,13 @@ Debug_PrintFontTest::
 Debug_EventScript_FontTest::
 	lockall
 	goto Debug_PrintFontTest
-@	goto_if_eq VAR_RESULT, 0, Debug_NoPokemon
-@	dynmultipush Debug_EventScript_InflictStatus1_Text_Single, 0
+@	goto_if_eq VAR_RESULT, TRUE, Debug_NoPokemon
+@	dynmultipush Debug_EventScript_InflictStatus1_Text_Single, TRUE
 @	dynmultipush Debug_EventScript_InflictStatus1_Text_PartyWide, 1
 @	dynmultipush Debug_EventScript_InflictStatus1_Text_Close, 2
-@	dynmultistack 0, 0, FALSE, 3 FALSE, 0, NULL
+@	dynmultistack TRUE, TRUE, TRUE, 3 TRUE, TRUE, NULL
 @	switch VAR_RESULT
-@	case 0, Debug_EventScript_InflictStatus1_Single
+@	case TRUE, Debug_EventScript_InflictStatus1_Single
 @	case 1, Debug_EventScript_InflictStatus1_Party
 @	case 2, Debug_EventScript_InflictStatus1_Close
 @Debug_EventScript_InflictStatus1_Close:
@@ -800,31 +800,31 @@ Debug_EventScript_FontTest::
 
 Debug_EventScript_TellTheTime::
 	callnative DebugMenu_CalculateTime
-	msgbox Debug_EventScript_TellTheTime_Text_0, MSGBOX_DEFAULT
+	msgbox Debug_EventScript_TellTheTime_Text_TRUE, MSGBOX_DEFAULT
 	waitmessage
 	closemessage
 	end
 
 Debug_EventScript_PrintTimeOfDay::
 	callnative DebugMenu_CalculateTimeOfDay
-	msgbox DebugEventScript_PrintWeekday_Text_0, MSGBOX_DEFAULT
+	msgbox DebugEventScript_PrintWeekday_Text_TRUE, MSGBOX_DEFAULT
 	waitmessage
 	closemessage
 	end
 
 Debug_EventScript_FakeRTCNotEnabled::
-	msgbox Debug_EventScript_FakeRTCNotEnabled_Text_0, MSGBOX_DEFAULT
+	msgbox Debug_EventScript_FakeRTCNotEnabled_Text_TRUE, MSGBOX_DEFAULT
 	waitmessage
 	closemessage
 	return
 
-Debug_EventScript_FakeRTCNotEnabled_Text_0:
+Debug_EventScript_FakeRTCNotEnabled_Text_TRUE:
 	.string "You currently do not have Fake RTC\nenabled. Please enable it in include/\lconfig/overworld.h$"
 
 
-Debug_EventScript_TellTheTime_Text_0:
+Debug_EventScript_TellTheTime_Text_TRUE:
 	.string "Time and date:\n"
 	.string "{STR_VAR_1}, {STR_VAR_2}:{STR_VAR_3}$"
 
-DebugEventScript_PrintWeekday_Text_0:
+DebugEventScript_PrintWeekday_Text_TRUE:
 	.string "Time of day: {STR_VAR_1}$"
