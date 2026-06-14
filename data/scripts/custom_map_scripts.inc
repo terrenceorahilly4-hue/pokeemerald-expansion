@@ -1,7 +1,3 @@
-#ifndef FNPC_ENABLE_NPC_FOLLOWERS
-#define FNPC_ENABLE_NPC_FOLLOWERS 1
-#endif
-
 .align 2
 BOND_RinnuaTown_MapScripts::
 .byte 0
@@ -216,7 +212,7 @@ BOND_Cliff_EventScript_Encounter::
     removeobject 1
     @ Trigger the follower engine to put Rockruff behind player
     setflag FLAG_SYS_FOLLOWER_READY
-    setfollowernpc 1, 0
+    @ setfollower 1, 1
     releaseall
     end
 
@@ -234,22 +230,3 @@ BOND_Cliff_Text_ObtainedRockruff:
 
 BOND_Cliff_Text_PartyFull:
     .string "You have no room for Rockruff...$"
-
-
-BOND_RinnuaTown_EventScript_CliffGuide::
-    lock
-    faceplayer
-    msgbox BOND_RinnuaTown_Text_CliffGuide, MSGBOX_YESNO
-    goto_if_eq VAR_RESULT, YES, BOND_RinnuaTown_EventScript_WarpToCliff
-    release
-    end
-
-BOND_RinnuaTown_EventScript_WarpToCliff::
-    warp MAP_BOND_CLIFF, 255, 10, 10
-    waitstate
-    release
-    end
-
-BOND_RinnuaTown_Text_CliffGuide:
-    .string "The coastal cliffs are just ahead.
-Would you like to go there now?$"
