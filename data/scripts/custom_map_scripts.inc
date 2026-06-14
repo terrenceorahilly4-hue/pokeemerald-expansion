@@ -230,3 +230,39 @@ BOND_Cliff_Text_ObtainedRockruff:
 
 BOND_Cliff_Text_PartyFull:
     .string "You have no room for Rockruff...$"
+
+.section script_data, "aw", %progbits
+.align 2
+BOND_RinnuaTown_EventScript_CliffGuide::
+lockall
+faceplayer
+msgbox BOND_RinnuaTown_Text_CliffGuideIntro, MSGBOX_YESNO
+compare VAR_RESULT, NO
+goto_if_eq BOND_RinnuaTown_EventScript_CliffGuide_Decline
+msgbox BOND_RinnuaTown_Text_CliffGuideWarp, MSGBOX_DEFAULT
+waitmessage
+closeonkeypress
+warp MAP_BOND_CLIFF, 255, 10, 8
+waitstate
+releaseall
+end
+
+BOND_RinnuaTown_EventScript_CliffGuide_Decline::
+msgbox BOND_RinnuaTown_Text_CliffGuideDecline, MSGBOX_DEFAULT
+waitmessage
+closeonkeypress
+releaseall
+end
+
+.section script_data, "aw", %progbits
+.align 2
+BOND_RinnuaTown_Text_CliffGuideIntro::
+.string "I've seen a strange Pokémon near the\n"
+.string "cliffs south of town.\p"
+.string "Want me to take you there?$"
+
+BOND_RinnuaTown_Text_CliffGuideWarp::
+.string "Stay close. Watch your step.$"
+
+BOND_RinnuaTown_Text_CliffGuideDecline::
+.string "Come find me if you change your mind.$"
