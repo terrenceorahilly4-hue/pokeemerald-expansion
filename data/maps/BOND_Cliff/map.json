@@ -1,7 +1,7 @@
 {
   "id": "MAP_BOND_CLIFF",
   "name": "BOND_Cliff",
-  "layout": "LAYOUT_ROUTE115",
+  "layout": "LAYOUT_ROUTE101",
   "music": "MUS_ROUTE122",
   "region_map_section": "MAPSEC_ROUTE_115",
   "requires_flash": false,
@@ -12,13 +12,7 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": [
-    {
-      "map": "MAP_BOND_RINNUA_TOWN",
-      "offset": 0,
-      "direction": "up"
-    }
-  ],
+  "connections": [],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_POOCHYENA",
@@ -36,5 +30,7 @@
   ],
   "warp_events": [],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [],
+  "primary_tileset": "gTileset_General",
+  "secondary_tileset": "gTileset_Petalburg"
 }
