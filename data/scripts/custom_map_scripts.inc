@@ -176,7 +176,7 @@ release
 end
 
 BOND_RinnuaTown_Text_Weather:
-.string "That sea breeze never gets old.\nYou can taste the salt on your\lips long after you leave this town.$"
+.string "That sea breeze never gets old.\nYou can taste the salt on your\nlips long after you leave this town.$"
 
 BOND_RinnuaTown_EventScript_BondHintNPC::
 lock

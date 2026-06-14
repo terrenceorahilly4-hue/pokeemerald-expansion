@@ -64,6 +64,20 @@
       "elevation": 0,
       "dest_map": "MAP_BOND_CIARANS_HOUSE_1F",
       "dest_warp_id": 1
+    },
+    {
+      "x": 9,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_BOND_CLIFF",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 10,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_BOND_CLIFF",
+      "dest_warp_id": 0
     }
   ],
   "coord_events": [
