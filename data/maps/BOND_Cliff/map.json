@@ -1,17 +1,12 @@
 {
   "id": "MAP_BOND_CLIFF",
-  "name": "BOND_Cliff",
-  "layout": "LAYOUT_ROUTE101",
-  "music": "MUS_ROUTE101",
-  "region": "REGION_HOENN",
-  "region_map_section": "MAPSEC_NONE",
+  "name": "BOND_CLIFF",
+  "layout": "LAYOUT_ROUTE115",
+  "music": "MUS_ROUTE122",
+  "region_map_section": "MAPSEC_ROUTE_115",
   "requires_flash": false,
-  "weather": "WEATHER_NONE",
+  "weather": "WEATHER_SUNNY",
   "map_type": "MAP_TYPE_ROUTE",
-  "object_events": [],
-  "warp_events": [],
-  "coord_events": [],
-  "bg_events": [],
   "allow_cycling": true,
   "allow_escaping": false,
   "allow_running": true,
@@ -20,9 +15,26 @@
   "connections": [
     {
       "map": "MAP_BOND_RINNUA_TOWN",
-      "direction": "down",
-      "offset": 0
+      "offset": 0,
+      "direction": "up"
     }
   ],
-  "type": "ROUTE"
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POOCHYENA",
+      "x": 10,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BOND_Cliff_EventScript_Encounter",
+      "flag": "FLAG_HIDE_BOND_CLIFF_ROCKRUFF"
+    }
+  ],
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": []
 }
