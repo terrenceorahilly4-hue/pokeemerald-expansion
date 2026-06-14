@@ -188,3 +188,12 @@ end
 
 BOND_RinnuaTown_Text_BondHint:
 .string "The old ones say Pokémon can feel\nwhat you feel. Not like reading\lyour mind -- more like knowing\lyour heart.$"
+
+BOND_Cliff_EventScript_Encounter::
+    lockall
+    msgbox BOND_Cliff_Text_EncounterThesis, MSGBOX_DEFAULT
+    releaseall
+    end
+
+BOND_Cliff_Text_EncounterThesis:
+    .string "Rockruff steps forward on the windy cliff.\nNo cage. No battle. Pure trust.$"
