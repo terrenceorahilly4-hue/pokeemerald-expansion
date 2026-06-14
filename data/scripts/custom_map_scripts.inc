@@ -212,7 +212,7 @@ BOND_Cliff_EventScript_Encounter::
     removeobject 1
     @ Trigger the follower engine to put Rockruff behind player
     setflag FLAG_SYS_FOLLOWER_READY
-    setfollower 1, 1
+    @ setfollower 1, 1
     releaseall
     end
 
