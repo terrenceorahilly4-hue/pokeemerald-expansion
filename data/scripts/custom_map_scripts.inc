@@ -1,3 +1,7 @@
+#ifndef FNPC_ENABLE_NPC_FOLLOWERS
+#define FNPC_ENABLE_NPC_FOLLOWERS 1
+#endif
+
 .align 2
 BOND_RinnuaTown_MapScripts::
 .byte 0
