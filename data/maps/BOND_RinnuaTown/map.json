@@ -8,6 +8,8 @@
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_TOWN",
+  "primary_tileset": "gTileset_General",
+  "secondary_tileset": "gTileset_Dewford",
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_1",
