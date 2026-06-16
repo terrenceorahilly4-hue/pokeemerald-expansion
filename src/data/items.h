@@ -14160,22 +14160,6 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_FameChecker,
         .iconPalette = gItemIconPalette_FameChecker,
         },
-
-    [ITEM_TEACHY_TV] =
-    {
-        .name = ITEM_NAME("Teachy TV"),
-        .price = 0,
-        .description = COMPOUND_STRING(
-            "A TV used for\n"
-            "educational purposes."),
-        .fieldUseFunc = FALSE,
-        .importance = 0,
-        .pocket = POCKET_KEY_ITEMS,
-        .type = ITEM_USE_FIELD,
-        .iconPic = gItemIcon_TeachyTV,
-        .iconPalette = gItemIconPalette_TeachyTV,
-    },
-
     [ITEM_SS_TICKET] =
     {
         .name = ITEM_NAME("S.S. Ticket"),
