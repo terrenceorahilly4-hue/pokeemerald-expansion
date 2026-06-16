@@ -14159,11 +14159,22 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .iconPic = gItemIcon_FameChecker,
         .iconPalette = gItemIconPalette_FameChecker,
-    },
+        },
 
     [ITEM_TEACHY_TV] =
-
-// Story Key Items
+    {
+        .name = ITEM_NAME("Teachy TV"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A TV used for\n"
+            "educational purposes."),
+        .fieldUseFunc = FALSE,
+        .importance = 0,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_KEY,
+        .iconPic = gItemIcon_TeachyTV,
+        .iconPalette = gItemIconPalette_TeachyTV,
+    },
 
     [ITEM_SS_TICKET] =
     {
