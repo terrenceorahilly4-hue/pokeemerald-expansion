@@ -1,4 +1,5 @@
 {
+    "layouts_table_label": "gMapLayouts",
     "layouts": [
         {
             "id": "LAYOUT_FLASHBACK_ROOM",
