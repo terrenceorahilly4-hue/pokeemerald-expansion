@@ -7251,7 +7251,6 @@ const struct ItemInfo gItemsInfo[] =
             "used to set up a\n"
             "camp with Pokémon."),
         .pocket = POCKET_KEY_ITEMS,
-        .sortType = ITEM_TYPE_NONE,
         .type = ITEM_USE_FIELD,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 0,
