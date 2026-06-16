@@ -9336,4 +9336,22 @@
             "layout_version": "emerald"
         }
     ]
+        ,
+        {
+            "id": "LAYOUT_BOND_CLIFF",
+            "name": "BOND_Cliff_Layout",
+            "width": 30,
+            "height": 40,
+            "border_width": 2,
+            "border_height": 2,
+            "primary_tileset": "gTileset_General",
+            "secondary_tileset": "gTileset_Petalburg",
+            "border_filepath": "data/layouts/BOND_Cliff/border.bin",
+            "blockdata_filepath": "data/layouts/BOND_Cliff/map.bin",
+            "layout_version": "emerald"
+        }
+        }
+    ]
+        }
+    ]
 }
