@@ -1,11 +1,11 @@
 {
   "id": "MAP_BOND_CLIFF",
   "name": "BOND_Cliff",
-  "layout": "LAYOUT_ROUTE101",
-  "music": "MUS_ROUTE122",
-  "region_map_section": "MAPSEC_ROUTE_115",
+  "layout": "LAYOUT_BOND_CLIFF",
+  "music": "MUS_END",
+  "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
-  "weather": "WEATHER_SUNNY",
+  "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_ROUTE",
   "allow_cycling": true,
   "allow_escaping": false,
@@ -15,7 +15,7 @@
   "connections": [],
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_POOCHYENA",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(ROCKRUFF)",
       "x": 10,
       "y": 8,
       "elevation": 3,
@@ -24,8 +24,21 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "BOND_Cliff_EventScript_Encounter",
+      "script": "BOND_Cliff_EventScript_Rockruff",
       "flag": "FLAG_HIDE_BOND_CLIFF_ROCKRUFF"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(VIRIZION)",
+      "x": 12,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BOND_Cliff_EventScript_Sliabhan",
+      "flag": "FLAG_HIDE_BOND_CLIFF_SLIABHAN"
     }
   ],
   "warp_events": [],

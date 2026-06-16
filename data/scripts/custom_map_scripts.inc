@@ -241,7 +241,7 @@ compare VAR_RESULT, NO
 goto_if_eq BOND_RinnuaTown_EventScript_CliffGuide_Decline
 msgbox BOND_RinnuaTown_Text_CliffGuideWarp, MSGBOX_DEFAULT
 waitmessage
-waitkeypress
+waitbuttonpress
 	closemessage
 warp MAP_BOND_CLIFF, 255, 10, 8
 waitstate
@@ -251,7 +251,7 @@ end
 BOND_RinnuaTown_EventScript_CliffGuide_Decline::
 msgbox BOND_RinnuaTown_Text_CliffGuideDecline, MSGBOX_DEFAULT
 waitmessage
-waitkeypress
+waitbuttonpress
 	closemessage
 releaseall
 end
