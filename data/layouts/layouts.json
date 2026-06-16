@@ -2609,17 +2609,6 @@
             "layout_version": "emerald"
         },
         {
-            "id": "LAYOUT_FLASHBACK_ROOM",
-            "name": "FlashbackRoom_Layout",
-            "width": 5,
-            "height": 5,
-            "primary_tileset": "gTileset_General",
-            "secondary_tileset": "gTileset_InsideOfTruck",
-            "border_filepath": "data/layouts/FlashbackRoom/border.bin",
-            "blockdata_filepath": "data/layouts/FlashbackRoom/map.bin",
-            "layout_version": "emerald"
-        },
-        {
             "id": "LAYOUT_SAFARI_ZONE_NORTHWEST",
             "name": "SafariZone_Northwest_Layout",
             "width": 40,
@@ -9334,17 +9323,6 @@
             "border_filepath": "data/layouts/OneIsland_KindleRoad_EmberSpa_Frlg/border.bin",
             "blockdata_filepath": "data/layouts/OneIsland_KindleRoad_EmberSpa_Frlg/map.bin",
             "layout_version": "frlg"
-        },
-        {
-            "id": "LAYOUT_BOND_AN_TINE_BHEO",
-            "name": "BOND_AnTineBheo_Layout",
-            "width": 15,
-            "height": 15,
-            "primary_tileset": "gTileset_General",
-            "secondary_tileset": "gTileset_General",
-            "border_filepath": "data/layouts/BOND_AnTineBheo/border.bin",
-            "blockdata_filepath": "data/layouts/BOND_AnTineBheo/map.bin",
-            "layout_version": "emerald"
         },
         {
             "id": "LAYOUT_FLASHBACK_ROOM",
