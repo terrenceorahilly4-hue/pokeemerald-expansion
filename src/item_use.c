@@ -1646,10 +1646,11 @@ void ItemUseOutOfBattle_TownMap(u8 taskId)
 
 
 
+
 // Pokémon: Bond of Éire - Custom Item Out-Of-Battle Field Callbacks
 void ItemUseCB_CampingGear(u8 taskId, void (*fp)(u8))
 {
-    SetWarpDestination(MAP_GROUP(BOND_AN_TINE_BHEO), MAP_NUM(BOND_AN_TINE_BHEO), -1, 7, 7);
+    SetWarpDestination(MAP_GROUP(MAP_BOND_AN_TINE_BHEO), MAP_NUM(MAP_BOND_AN_TINE_BHEO), -1, 7, 7);
     WarpIntoMap();
     SetMainCallback2(CB2_LoadMap);
     DestroyTask(taskId);
