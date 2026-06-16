@@ -1645,24 +1645,14 @@ void ItemUseOutOfBattle_TownMap(u8 taskId)
 
 
 // Pokémon: Bond of Éire - Custom Item Out-Of-Battle Field Callbacks
-void ItemUseCB_CampingGear(u8 taskId)
+static void ItemUseCB_CampingGear(u8 taskId)
 {
-    SetWarpDestination(MAP_GROUP(BOND_ANTINEBHEO), MAP_NUM(BOND_ANTINEBHEO), -1, 7, 7);
-    WarpIntoMap();
-    SetMainCallback2(CB2_LoadMap);
-    DestroyTask(taskId);
+    SetWarpDestination(MAP_GROUP(MAP_BOND_ANTINEBHEO), MAP_NUM(MAP_BOND_ANTINEBHEO), -1, 7, 7);
+    CB2_LoadMap();
 }
 
 void ItemUseOutOfBattle_CampingGear(u8 taskId)
 {
-    if (gMapHeader.mapType != MAP_TYPE_INDOOR && gMapHeader.mapType != MAP_TYPE_UNDERGROUND)
-    {
-        gItemUseCB = ItemUseCB_CampingGear;
-        SetUpItemUseOnField(taskId);
-    }
-    else
-    {
-        // Triggers the standard "Oak's words echoed" text lock if used indoors
-        DisplayDadsAdviceCannotUseItemMessage(taskId, 0);
-    }
+    gItemUseCB = ItemUseCB_CampingGear;
 }
+
