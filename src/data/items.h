@@ -14171,7 +14171,7 @@ const struct ItemInfo gItemsInfo[] =
         .fieldUseFunc = FALSE,
         .importance = 0,
         .pocket = POCKET_KEY_ITEMS,
-        .type = ITEM_KEY,
+        .type = ITEM_USE_FIELD,
         .iconPic = gItemIcon_TeachyTV,
         .iconPalette = gItemIconPalette_TeachyTV,
     },
