@@ -1642,3 +1642,19 @@ void ItemUseOutOfBattle_TownMap(u8 taskId)
 }
 
 #undef tUsingRegisteredKeyItem
+
+// Pokémon: Bond of Éire - Custom Item Out-Of-Battle Field Callbacks
+void ItemUseOutOfBattle_CampingGear(u8 taskId)
+{
+    if (gMapHeader.mapType != MAP_TYPE_INDOOR && gMapHeader.mapType != MAP_TYPE_UNDERGROUND)
+    {
+        // Teleport player cleanly directly to the central fire ring tile coords at (7, 7)
+        WarpIntoMap(MAP_GROUP(BOND_AN_TINE_BHEO), MAP_NUM(BOND_AN_TINE_BHEO), -1, 7, 7);
+        FieldEffectActiveListRemove(FLDEFF_USE_ITEM);
+    }
+    else
+    {
+        // Rejects execution gracefully if the player is inside a cave or building layer
+        DisplayItemMessage(taskId, 2, gText_CannotUseCampingGearHere, BagMenu_InitBags);
+    }
+}

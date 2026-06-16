@@ -346,3 +346,6 @@
 #define VAR_ECHO_BOND_LEVEL   0x40F1
 #endif // GUARD_CONSTANTS_VARS_H
 #define VAR_RINNUA_TOWN_STATE  0x40
+
+// Pokémon: Bond of Éire - Custom System Trackers
+#define VAR_BOND_TRUST_MATRIX               0x4021

@@ -1142,3 +1142,6 @@ enum EffectItem
 };
 
 #endif  // GUARD_CONSTANTS_ITEMS_H
+
+// Pokémon: Bond of Éire - Custom Alpha Items
+#define ITEM_CAMPING_GEAR                   513
