@@ -7240,7 +7240,24 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_Glimmoranite,
         .iconPalette = gItemIconPalette_Glimmoranite,
     },
-
+    
+   [ITEM_CAMPING_GEAR] =
+    {
+        .name = ITEM_NAME("Camping Gear"),
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_NONE,
+        .description = COMPOUND_STRING(
+            "A specialized kit\n"
+            "used to set up a\n"
+            "camp with Pokémon."),
+        .pocket = POCKET_KEY_ITEMS,
+        .sortType = ITEM_TYPE_NONE,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 0,
+        .iconPic = gItemIcon_CampingGear,
+        .iconPalette = gItemIconPalette_CampingGear,
+    },
 // Gems
     #if I_PRICE >= GEN_9
         #define GEM_PRICE 15000
