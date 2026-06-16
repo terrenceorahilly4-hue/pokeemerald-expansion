@@ -9336,16 +9336,14 @@
             "layout_version": "frlg"
         },
         {
-            "id": "LAYOUT_BOND_CLIFF",
-            "name": "BOND_Cliff_Layout",
-            "width": 30,
-            "height": 40,
-            "border_width": 2,
-            "border_height": 2,
+            "id": "LAYOUT_BOND_AN_TINE_BHEO",
+            "name": "BOND_AnTineBheo_Layout",
+            "width": 15,
+            "height": 15,
             "primary_tileset": "gTileset_General",
-            "secondary_tileset": "gTileset_Petalburg",
-            "border_filepath": "data/layouts/BOND_Cliff/border.bin",
-            "blockdata_filepath": "data/layouts/BOND_Cliff/map.bin",
+            "secondary_tileset": "gTileset_General",
+            "border_filepath": "data/layouts/BOND_AnTineBheo/border.bin",
+            "blockdata_filepath": "data/layouts/BOND_AnTineBheo/map.bin",
             "layout_version": "emerald"
         }
     ]
