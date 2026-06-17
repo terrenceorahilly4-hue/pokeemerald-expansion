@@ -9343,7 +9343,7 @@
             "border_width": 2,
             "border_height": 2,
             "primary_tileset": "gTileset_General",
-            "secondary_tileset": "gTileset_Petalburg",
+            "secondary_tileset": "gTileset_Dewford",
             "border_filepath": "data/layouts/BOND_Cliff/border.bin",
             "blockdata_filepath": "data/layouts/BOND_Cliff/map.bin",
             "layout_version": "emerald"

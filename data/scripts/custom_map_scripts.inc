@@ -64,6 +64,7 @@ BOND_TestWarp_Campfire::
 msgbox BOND_TestWarp_Campfire_Text, MSGBOX_YESNO
 compare VAR_RESULT, NO
 goto_if_eq BOND_TestWarp_Campfire_End
+	giveitem ITEM_CAMPING_GEAR
 warpsilent MAP_BOND_AN_TINE_BHEO, 0
 waitstate
 release
