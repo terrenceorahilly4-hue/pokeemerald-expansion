@@ -1,0 +1,5 @@
+.include "data/maps/BOND_Ballyduff/scripts.inc"
+.include "data/maps/BOND_PortCeol/scripts.inc"
+.include "data/maps/BOND_Dunrock/scripts.inc"
+.include "data/maps/BOND_Cahermoth/scripts.inc"
+.include "data/maps/BOND_Mallowdale/scripts.inc"
