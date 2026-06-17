@@ -268,3 +268,18 @@ BOND_RinnuaTown_Text_CliffGuideWarp::
 
 BOND_RinnuaTown_Text_CliffGuideDecline::
 .string "Come find me if you change your mind.$"
+
+BOND_Ballyduff_MapScripts::
+	.byte 0
+
+BOND_PortCeol_MapScripts::
+	.byte 0
+
+BOND_Dunrock_MapScripts::
+	.byte 0
+
+BOND_Cahermoth_MapScripts::
+	.byte 0
+
+BOND_Mallowdale_MapScripts::
+	.byte 0
